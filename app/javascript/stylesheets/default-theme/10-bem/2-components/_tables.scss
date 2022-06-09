@@ -1,0 +1,178 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    th, td {
+        padding: 1rem 1rem 1rem 1.25rem;
+    }
+    th {
+        text-align: left;
+
+        a:not(.three-dots) {
+            text-decoration: underline;
+        }
+    }
+    td {
+        a {
+            text-decoration: none;
+        }
+
+        input[value="Destroy"] {
+            background: transparent;
+            border: none;
+        }
+    }
+
+    &-sortable {
+        display: table;
+        min-width: 100%;
+        padding-right: 20px;
+        margin-right:-20px;
+        margin-bottom: 25px;
+
+        .table_content-sortable {
+            display: table-row-group;
+        }
+
+        .table_row {
+            &-header {
+                display: table-row;
+
+                >.table_col {
+                    padding: 1rem 1rem 1rem 1.25rem;
+                }
+            }
+            &-sortable {
+                display: table-row;
+                width: 100%;
+
+                >.table_col {
+                    padding: 1rem 1rem 1rem 1.25rem;
+                }
+            }
+        }
+        .table_label {
+            display: table-cell;
+            font-weight: bold;
+        }
+        .table_col {
+            display: table-cell;
+            vertical-align: middle;
+            box-sizing: border-box;
+
+            &-action {
+                min-width: 300px;
+                padding: 0;
+            }
+
+            .table_handle {
+                cursor: move;
+                cursor: grab;
+                cursor: -moz-grab;
+                cursor: -webkit-grab;
+
+                &:active {
+                    cursor: grabbing;
+                    cursor: -moz-grabbing;
+                    cursor: -webkit-grabbing;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .table_action {
+                display: inline-block;
+                width: auto;
+                padding-left: 20px;
+                padding-right: 20px;
+                vertical-align: middle;
+
+                input[value="Destroy"] {
+                    background: transparent;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.component-reorder-handle {
+    width: 40px;
+    padding: 0px;
+  
+    .table_handle {
+      width: 40px;
+    }
+}
+
+.pagination {
+    text-align: right;
+    margin-top: -25px;
+    margin-bottom: 15px;
+
+    &__button {
+        display: inline-block;
+        margin: 0;
+        margin-left: -1px;
+        border-radius: 0.25rem;
+
+        > a {
+            display: inline-block;
+            text-decoration: none;
+            padding: .3rem .75rem;
+        }
+
+        &--first, &--previous, &--next, &--last {
+            @extend .pagination__button;
+
+            &-disabled, &-disabled:hover {
+                @extend .pagination__button;
+                
+                > a {
+                    pointer-events: none;
+                }
+            }
+        }
+        &--gap, &--gap-disabled, &--gap-disabled:hover {
+            @extend .pagination__button;
+            pointer-events: none;
+        }
+
+        &--active {
+            @extend .pagination__button;
+            position: relative;
+
+            > a {
+                pointer-events: none;
+            }
+
+            &:hover {
+                > a {
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+.action-bar{
+    float: right;
+  
+    &__button {
+      @include button-primary;
+  
+      > a {
+        text-decoration: none;
+      }
+    }
+}
+
+.table-sortable + .action-bar { // Staying align with sortable table even when overflow
+    padding-right: 20px;
+    margin-right: -20px;
+}

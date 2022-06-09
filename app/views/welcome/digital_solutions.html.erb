@@ -1,0 +1,287 @@
+<% content_for (:html_title) {'Digital Solutions | '} %>
+<% content_for (:html_desc) {'We help our clients develop their businesses. Different OTC commodities brokers trusted our experience and skills to develop their own trading places.
+'} %>
+
+
+<div class="hero">
+        <img src="/images/personalised_digital_solution.jpg" alt="Personalised Digital Solution" class="hero__image">
+        <div class="hero__content hero__content_padding_100">
+            <img src="/images/bg-logo.svg" alt="" class="hero__logo-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="hero__title"><div class="margin-none"><%= html_snippet("digital_solution.main_section.title", "en") %></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="section-title section-title_center section-title_no-content">
+                        <h2 class="section-title__header">
+                          <div class="margin-none">
+                           <%= html_snippet("digital_solution.our_digital_solution_section.title", "en") %>
+                          </div>
+                        </h2>
+                        <div class="section-title__sub-header section-title__sub-header_large_black">
+                          <div class="margin-none">
+                            <%= html_snippet("digital_solution.our_digital_solution_section.subtitle", "en") %>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section page-section_bg_gray">
+        <div class="container">
+            <div class="text-with-image">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="text-with-image__image">
+                            <img src="/images/core-in-digital-solutions.jpeg" alt="Digital Brokerage">
+                        </div>
+                    </div>
+                    <div class="col-md-14">
+                        <div class="text-with-image__text">
+                            <div class="section-title">
+                                <div class="section-title__header">
+                                  <div class="margin-none">
+                                    <%= html_snippet("digital_solution.core_in_platform_section.title", "en") %>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="text-with-image__content">
+                              <div class="margin-none">
+                                <%= html_snippet("digital_solution.core_in_platform_section.subtitle", "en") %>
+                                <%= link_to '<b>START A FREE AUDIT FOR YOUR COMPANY</b>'.html_safe,
+                                          new_contact_path(
+                                            contact: { type: "free_audit"},
+                                            return_to: digital_solutions_path(),
+                                          ),
+                                          id: "btn-free-audit",
+                                          class: "btn btn-primary mt-4 ps-5 pe-5",
+                                          data: {
+                                            controller: "modal",
+                                            action: "modal#show",
+                                            'modal-target': "modal-dialog-center-l"
+                                          }
+                                %>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section page-section_bg_gray">
+        <div class="container">
+            <div class="text-with-image">
+                <div class="row">
+                    <div class="col-md-14">
+                        <div class="text-with-image__text">
+                           <div class="section-title">
+                                <div class="section-title__header">
+                                  <div class="margin-none">
+                                    <%= html_snippet("digital_solution.free_audit_section.title", "en") %>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="text-with-image__content">
+                              <div class="margin-none">
+                                <%= html_snippet("digital_solution.free_audit_section.subtitle", "en") %>
+                                
+                                <%= link_to '<b>START NOW</b>'.html_safe,
+                                          new_contact_path(
+                                            contact: { type: "free_audit"},
+                                            return_to: digital_solutions_path(),
+                                          ),
+                                          id: "btn-free-audit",
+                                          class: "btn btn-primary mt-4 ps-5 pe-5",
+                                          data: {
+                                            controller: "modal",
+                                            action: "modal#show",
+                                            'modal-target': "modal-dialog-center-l"
+                                          }
+                                %>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="text-with-image__image">
+                            <img src="/images/canva-digitalsolution.png" alt="Digital Brokerage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="section-title section-title_no-content">
+                        <h2 class="section-title__header">
+                          <div class="margin-none">
+                            <%= html_snippet("digital_solution.ctrm_software_section.title", "en") %>
+                          </div>
+                        </h2>
+                        <div class="row mt-5">
+                            <div class="col-22 col-md-8">
+                                <ul>
+                                    <li class="mb-3"><%= html_snippet("digital_solution.ctrm_software_section.col1.item1", "en") %></li>
+                                    <li class="mb-3"><%= html_snippet("digital_solution.ctrm_software_section.col1.item2", "en") %></li>
+                                </ul>
+                            </div>
+                            <div class="col-22 col-md-8">
+                                <ul>
+                                    <li class="mb-3"><%= html_snippet("digital_solution.ctrm_software_section.col2.item1", "en") %></li>
+                                    <li class="mb-3"><%= html_snippet("digital_solution.ctrm_software_section.col2.item2", "en") %></li>
+                                    <li class="mb-3"><%= html_snippet("digital_solution.ctrm_software_section.col2.item3", "en") %></li>
+                                </ul>
+                            </div>
+                            <div class="col-22 col-md-8">
+                                <ul>
+                                    <li class="mb-3"><%= html_snippet("digital_solution.ctrm_software_section.col3.item1", "en") %></li>
+                                    <li class="mb-3"><%= html_snippet("digital_solution.ctrm_software_section.col3.item2", "en") %></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="page-section section-our-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="section-title section-title_center">
+                        <h2 class="section-title__header">
+                          <div class="margin-none">
+                           <%= html_snippet("digital_solution.system_trading_brokerage_section.title", "en") %>
+                          </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="our-products">
+                        <div id="carouselWithIndicators" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/images/solutions-1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/newbid-thaihigh.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/home.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/screen3.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/screen4.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/screen5.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/screen6.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/screen7.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/screen8.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--    <section class="page-section page-section_bg_gray page-section_padding_30">
+        <div class="container">
+            <div class="text-with-image">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-with-image__text">
+                            <div class="focus focus_horizontal">
+                                <div class="focus__img">
+                                    <img src="/images/network.svg" alt="">
+                                </div>
+                                <div class="focus__title">Sugar physical brokerage in the world market</div>
+                            </div>
+                            <div class="focus focus_horizontal">
+                                <div class="focus__img">
+                                    <img src="images/ico2.svg" alt="">
+                                </div>
+                                <div class="focus__title">Commodities trading platform development</div>
+                            </div>
+                            <div class="focus focus_horizontal">
+                                <div class="focus__img">
+                                    <img src="images/ico-3.svg" alt="">
+                                </div>
+                                <div class="focus__title">Quantitative Research</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="text-with-image__image">
+                            <img src="images/solutions-img-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    
+    
+
+
+
+
+
+
+
+    <!-- <section class="page-section page-section_bg_gray page-section-linkedin">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="section-title section-title_center">
+                        <h2 class="section-title__header">
+                            Latest <span>Linkedin Feeds</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->

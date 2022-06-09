@@ -1,0 +1,38 @@
+@import "variables";
+
+
+// Library blocks
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "library.blocks/fontawesome/fontawesome";
+@import "library.blocks/feather/feather";
+
+@import "global";
+
+// Desktop blocks
+@import "desktop.blocks/tdc-btn/tdc-btn";
+@import "desktop.blocks/trading-interests/trading-interests";
+@import "desktop.blocks/trading-interests-list/trading-interests-list";
+@import "desktop.blocks/datepicket/datepicket";
+@import "desktop.blocks/trading-screen-animation/trading_screen_animations";
+@import "desktop.blocks/tdc-nav/tdc-nav";
+@import "desktop.blocks/modal/modal";
+@import "desktop.blocks/table/table";
+@import "desktop.blocks/commodities-list/commodities-list";
+@import "desktop.blocks/company/company";
+@import "desktop.blocks/slider/slider";
+@import "desktop.blocks/app-content/app-content";
+@import "desktop.blocks/footer/footer";
+@import "desktop.blocks/homepage/homepage";
+@import "desktop.blocks/specialists/specialists";
+@import "desktop.blocks/login/login";
+@import "desktop.blocks/strip/strip";
+@import "desktop.blocks/users-activity/users-activity";
+@import "desktop.blocks/vue-select/vue-select";
+
+// Responsive
+@import "responsive.blocks/responsive";
+
+// Oscar generated content
+@import "oscar/index.scss";
+
+

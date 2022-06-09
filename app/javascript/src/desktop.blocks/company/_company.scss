@@ -1,0 +1,45 @@
+.copany-page-top {
+    margin-bottom: 25px;
+}
+.company__submenu{
+    li{
+        a{
+            color: $text-off;
+            font-weight: 500;
+            padding: 10px 0;
+            // border-bottom: 1px solid $border-color;
+            display: block;
+            position: relative;
+            &:hover{
+                text-decoration: none;
+                filter: brightness(70%);
+            }
+        }
+        &:last-child{
+            a{
+                border: none;
+            }
+        }
+        &.active{
+            a{
+                color: #333;
+                &:after{
+                    content: '';
+                    width: 32px;
+                    height: 2px;
+                    background-color: $blue;
+                    position: absolute;
+                    left: 0;
+                    bottom: 5px;
+                    // transform: translateX(-50%);
+                    border: none;
+                }
+            }
+        }
+    }
+}
+.permission-form{
+    .actions{
+        margin-top: 25px;
+    }
+}

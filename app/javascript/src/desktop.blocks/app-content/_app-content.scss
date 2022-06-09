@@ -1,0 +1,58 @@
+.app-content__tab {
+    margin-bottom: 20px;
+    li.active{
+        a{
+            color: #333;
+            position: relative;
+            &:before{
+                content: '';
+                width: $title-deco-width;
+                height: 2px;
+                bottom: 5px;
+                position: absolute;
+                background-color: $blue;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .green{
+                color: $green;
+            }
+        }
+    }
+}
+
+.application-card{
+    input[type=text], button, select, optgroup, textarea, input[type=email], input[type=password], input[type=number]{
+    border-radius: 20px !important;
+    height: 40px;
+}
+.input-group-addon {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 500;
+    padding: 0 15px;
+}
+.form-group{
+    position: relative;
+}
+}
+
+
+
+.modal-bid-offer{
+    .input-group > .form-control, .input-group > .form-control-plaintext, .input-group > .custom-select, .input-group > .custom-file {
+    border-radius: 20px !important;
+    }
+    .input-group-text {
+        position: absolute;
+        right: 0;
+        height: 40px;
+        background-color: #fff;
+        z-index: 9;
+    }
+}
+

@@ -1,0 +1,277 @@
+<% content_for (:html_title) {''} %>
+<% content_for (:html_desc) {'The Deepcore is a group of physical commodities brokers joining their skills to deliver to the Commodities markets the best trading experience possible.
+'} %>
+
+<div class="hero">
+    <div>
+        <video autoplay loop muted class="hero__video">
+            <source src="/images/commodities_transport.mp4" type="video/mp4" alt="Commodities Transport">
+        </video>
+    </div>
+    <div class="hero__content hero__content_homepage">
+        <img src="/images/bg-logo.svg" alt="" class="hero__logo-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                  <div class="margin-none">
+                    <div class="hero__title hero__title--smaller"><%= html_snippet("homepage.main_section.title", "en") %></div>
+                    <div class="hero__text"><%= html_snippet("homepage.main_section.subtitle", "en") %></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="page-section page-section_shadow">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24">
+                <div class="section-title section-title_center">
+                  <div class="margin-none">
+                    <h2 class="section-title__header"><%= html_snippet("homepage.what_we_do_section.title", "en") %></h2>
+                    <div class="section-title__sub-header"><%= html_snippet("homepage.what_we_do_section.subtitle", "en") %></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="focus">
+                    <div class="focus__img">
+                        <img src="/images/home-picto-1.svg" alt="">
+                    </div>
+                  <div class="margin-none">
+                    <div class="focus__title"><%= html_snippet("homepage.what_we_do_section.item1", "en") %></div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="focus">
+                    <div class="focus__img">
+                        <img src="/images/home-picto-2.svg" alt="">
+                    </div>
+                  <div class="margin-none">
+                    <div class="focus__title"><%= html_snippet("homepage.what_we_do_section.item2", "en") %></div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="focus">
+                    <div class="focus__img">
+                        <img src="/images/home-picto-3.svg" alt="">
+                    </div>
+                    <div class="margin-none">
+                      <div class="focus__title"><%= html_snippet("homepage.what_we_do_section.item3", "en") %></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section big-data-showcase">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24">
+                <div class="section-title section-title_center">
+                    <h2 class="section-title__header section-title__header--simple section-title__header--compact d-inline-block"><span>Big Data</span></h2>
+                    <div class="indicator__new--title">New</div>
+                    <div class="section-title__header section-title__header--simple">FOB Sugar values worldwide</div>
+                </div>
+            </div>
+        </div>
+        <div class="row big-data-showcase__content">
+            <div class="col-22 col-lg-10">
+                <div class="section__special-content d-flex flex-column align-items-center position-relative">
+                    <span class="indicator__new--left">New</span>
+                    <div class="fs-5 text-secondary pe-1">Pack</div><br>
+                    <div class="showcase__title"><span>Historical</span><br> Values</div>
+                    <div class="showcase__body">Get access to all the FOB values since 2017</div>
+                    <%= link_to "SEE MORE", data_path(locale: I18n.locale), class: "btn-outline-data" %>
+                </div>
+            </div>
+            <div class="col-22 col-lg-10">
+                <div class="section__special-content d-flex flex-column align-items-center position-relative">
+                    <span class="indicator__new--left">New</span>
+                    <div class="fs-5 text-secondary pe-1">Pack</div><br>
+                    <div class="showcase__title"><span>Daily</span><br> Updated Values</div>
+                    <div class="showcase__body">Get access to our daily FOB values updated</div>
+                    <%= link_to "SEE MORE", data_path(locale: I18n.locale), class: "btn-outline-data" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section page-section_bg_gray page-section_padding_30  page-section_shadow">
+    <div class="container">
+        <div class="text-with-image">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-with-image__image">
+                        <img src="/images/femme-data.png" alt="Technology and Physical Commodities Trading">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="text-with-image__text">
+                        <div class="section-title">
+                            <div class="section-title__header">
+                              <div class="margin-none">
+                              <%= html_snippet("homepage.technologie_physical_section.title", "en") %>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="text-with-image__content--spaced py-4">
+                          <div class="margin-none">
+                            <%= html_snippet("homepage.technologie_physical_section.subtitle", "en") %>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section section-our-products page-section_shadow">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24">
+                <div class="section-title section-title_center">
+                    <h2 class="section-title__header">
+                      <div class="margin-none">
+                      <%= html_snippet("homepage.system_trading_brokerage_section.title", "en") %>
+                      </div>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-24">
+                <div class="our-products">
+                    <div id="carouselWithIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                            <button type="button" data-bs-target="#carouselWithIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/images/solutions-1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/newbid-thaihigh.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/home.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/screen3.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/screen4.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/screen5.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/screen6.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/screen7.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/screen8.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--partners logos-->
+<section class="page-section page-section_padding_30 page-section_shadow">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24">
+                <div class="section-title section-title_center">
+                    <h2 class="section-title__header">
+                      <div class="margin-none">
+                        <%= html_snippet("homepage.they_trust_us_section.title", "en") %>
+                      </div>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-24">
+                <div class="our-partners">
+                    <div class="row">
+                        <img src="/images/partners/adecoagro.jpg" class="col-md-3 col-sm-10" alt="AdecoAgro">
+                        <img src="/images/partners/adm.png" class="col-md-3 col-sm-10" alt="ADM">
+                        <img src="/images/partners/agrex.png" class="col-md-3 col-sm-10" alt="Agrex">
+                        <img src="/images/partners/alvean.png" class="col-md-3 col-sm-10" alt="Alvean">
+                        <img src="/images/partners/amaggi.png" class="col-md-3 col-sm-10" alt="Amaggi">
+                        <img src="/images/partners/avere.jpg" class="col-md-3 col-sm-10" alt="Avere">
+                    </div>
+                    <div class="row">
+                        <img src="/images/partners/bunge.jpg" class="col-md-3 col-sm-10" alt="Bunge">
+                        <img src="/images/partners/canex.jpg" class="col-md-3 col-sm-10" alt="Canex">
+                        <img src="/images/partners/cargill.png" class="col-md-3 col-sm-10" alt="Cargill">
+                        <img src="/images/partners/cj.png" class="col-md-3 col-sm-10" alt="CJ">
+                        <img src="/images/partners/cofco.jpg" class="col-md-3 col-sm-10" alt="COFCO">
+                        <img src="/images/partners/czarnikow.png" class="col-md-3 col-sm-10" alt="Czarnikow">
+                    </div>
+                    <div class="row">
+                        <img src="/images/partners/edf_man.png" class="col-md-3 col-sm-10" alt="ED&F Man">
+                        <img src="/images/partners/enerfo.png" class="col-md-3 col-sm-10" alt="Enerfo">
+                        <img src="/images/partners/etg.png" class="col-md-3 col-sm-10" alt="ETG">
+                        <img src="/images/partners/gar.jpg" class="col-md-3 col-sm-10" alt="Gar">
+                        <img src="/images/partners/glencore.png" class="col-md-3 col-sm-10" alt="Glencore">
+                        <img src="/images/partners/itochu.png" class="col-md-3 col-sm-10" alt="Itochu">
+                    </div>
+                    <div class="row">
+                        <img src="/images/partners/ldc.png" class="col-md-3 col-sm-10" alt="LDC">
+                        <img src="/images/partners/marubeni.1.png" class="col-md-3 col-sm-10" alt="Marubeni">
+                         <img src="/images/partners/novaagri.png" class="col-md-3 col-sm-10" alt="Novaagri">
+                         <img src="/images/partners/olam.png" class="col-md-3 col-sm-10" alt="Olam">
+                        <img src="/images/partners/raizen.png" class="col-md-3 col-sm-10" alt="Raizen">
+                        <img src="/images/partners/sopex.png" class="col-md-3 col-sm-10" alt="Sopex">
+                    </div>
+                    <div class="row">
+                        <img src="/images/partners/studen.png" class="col-md-3 col-sm-10" alt="Studen">
+                        <img src="/images/partners/sucden.png" class="col-md-3 col-sm-10" alt="Sucden">
+                        <img src="/images/partners/tereos.png" class="col-md-3 col-sm-10" alt="Tereos">
+                        <img src="/images/partners/viterra.png" class="col-md-3 col-sm-10" alt="Viterra">
+                        <img src="/images/partners/wilmar.png" class="col-md-3 col-sm-10" alt="Wilmar">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="page-section page-section_bg_gray page-section-linkedin">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="section-title section-title_center">
+                        <h2 class="section-title__header">
+                            Latest <span>Linkedin Feeds</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->

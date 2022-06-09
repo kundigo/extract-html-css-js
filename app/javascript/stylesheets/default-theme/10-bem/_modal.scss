@@ -1,0 +1,155 @@
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+
+.modal {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__container {
+    float: right;
+    background: #fff;
+    padding: 50px;
+    width: 650px;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+}
+
+.modal-header { // Bootstrap naming ? BEM : modal__header ?
+  height: 40px;
+  margin-bottom: 20px;
+  display: block;
+  border-bottom: 2px solid lightgray;
+
+  > .modal-title { // Bootstrap naming ? BEM : modal__title ?
+    float: left;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  > .close { // Bootstrap naming ? BEM : modal__close ?
+    @extend .btn-close;
+    float: right;
+
+    > span {
+      @extend .btn-close;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.preloader--hidden {
+  display: none;
+}
+.preloader--shown {
+  position: fixed;
+  top: 40px;
+  right: 25px;
+  width: 200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 2px solid lightskyblue;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.preloader__wheel {
+  width: 22px;
+  height: 22px;
+  border-right: 2px solid lightskyblue;
+  border-radius: 100%;
+  margin-left: 25px;
+  will-change: transform;
+  animation: preloader__wheel-spin 1s infinite linear
+}
+
+@keyframes preloader__wheel-spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+
+// Inputs
+input, .input-block__append, .input-block__prepend, .custom-select {
+  font-size: .825rem !important;
+  color: $--gray !important;
+}
+
+.input-block {
+  @extend .input-group;
+  @extend .mt-2;
+  @extend .mb-3;
+
+  &__text, &__append, &__prepend {
+    @extend .input-group-text;
+  }
+
+  &__error-feedback {
+    @extend .invalid-feedback;
+  }
+
+  &__field {
+    @extend .form-control;
+
+    &--invalid {
+      @extend .is-invalid;
+    }
+  }
+}
+
+.checkbox {
+  position: absolute;
+  margin-bottom: -2px;
+  top: 5px;
+  left: 0;
+
+  &__container {
+    position: relative;
+    display: block;
+    margin-top: .5rem; // The label would not be on top so this would not be needed ?
+    padding-left: 25px;
+    line-height: 2;
+
+    > .input-block__error-feedback {
+      margin-left: -25px;
+    }
+  }
+}
+
+.custom-select {
+  @extend .form-select;
+}
+
+.editor {
+  min-height: 300px;
+}
+
+.k-form-js-lib-dev {
+  display: block;
+  width: 400px;
+  margin: 25px auto;
+}

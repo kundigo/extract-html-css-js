@@ -1,0 +1,190 @@
+@import "../../stylesheets/default-theme/10-bem/2-components/mixins/modal_form_display";
+
+.container--oscar-generated {
+    @extend .container;
+}
+
+.container--oscar-generated,
+.container--custom-data {
+    .devbot-template-container {
+        @extend .application-layout;
+        @extend .application-card;
+        min-height: calc(100vh - 320px); // Overide application-layout for visible footer
+        margin: 0;
+        float: left;
+        margin-top: 20px;
+
+        &__title {
+            @extend .app-title;
+            display: flex;
+
+            h1 {
+                order: -1;
+        
+                &::before {
+                    content: "";
+                    width: 35px;
+                    height: 1px;
+                    border-bottom: 2px solid;
+                    bottom: 18px;
+                    position: absolute;
+                }
+            }
+
+            .action-bar {
+                @extend .ms-3;
+                &__button {
+                    display: flex;
+                    a {
+                        @extend .tdc-btn_header;
+                    }
+                }
+            }
+        }
+    }
+
+    .devbot-template-container__body { 
+        @extend .app-content;
+
+        .card span input[type=number] { // Pagination count
+            @extend .form-control;
+            display: inline-block;
+        }
+    }
+
+    .action-bar {
+        &__button {
+            a {
+                @extend .tdc-btn;
+                @extend .tdc-btn__color_green;
+                width: auto !important;
+            }
+        }
+    }
+
+    .card {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+        border: none;
+    }
+
+    .table {
+        margin: 25px 0;
+
+        th {
+            border-bottom: none !important;
+        }
+        td {
+            vertical-align: middle;
+        }
+        input[value="Destroy"] {
+            color: #2700cc;
+            background: transparent;
+            border: none;
+            font-size: .825rem;
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -25px;
+        margin-bottom: 25px;
+
+        > * {
+            a {
+                @extend .page-link;
+            }
+        }
+        .pagination__button {
+            &--active a {
+                z-index: 3;
+                color: #fff;
+                background-color: #3100ff;
+                border-color: #3100ff;
+            }
+            &--first-disabled, &--previous-disabled, &--next-disabled, &--last-disabled, &--gap, &--gap-disabled {
+                a {
+                    pointer-events: none;
+                    color: #6c757d;
+                }
+            }
+        }
+    }
+
+    .model-form { // Form in new tab
+        &__close {
+            display: none;
+        }
+
+        &__body {
+            label {
+                @extend .mt-2;
+                @extend .mb-1;
+            }
+        }
+
+        &__actions {
+            input[type=submit] {
+                @extend .tdc-btn;
+                @extend .tdc-btn__color_blue;
+                margin-top: 20px;
+            }
+        }
+        &__return {
+            margin-top: 25px;
+        }
+    }
+
+    .show_field--label-column {
+        display: inline-block;
+        width: 25%;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+
+    .show_field--value-column {
+        display: inline-block;
+        width: calc(-5px + 75%);
+        box-sizing: border-box;
+    }
+
+    .actions-show-screen {
+        margin-top: 25px;
+
+        &__destroy-action {
+            font-size: 14px;
+        }
+    }
+    .action-delete--with-icon,
+    .action-desactivate {
+        color: #2700cc;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .action-desactivate {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+// Layout tweak for data only, add above if backend needs
+.container--custom-data {
+    .devbot-template-container {
+        margin: 0;
+    }
+    .model-form__header {
+        border-color: transparent !important;
+    }
+}
+
+// Large container for Data tables
+.container--custom-data {
+    width: 90vw;
+    margin: auto;
+}
+
+.modal-content .devbot-template-container {
+    min-height: 320px;
+}

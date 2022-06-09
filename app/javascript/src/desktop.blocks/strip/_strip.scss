@@ -1,0 +1,211 @@
+.month{
+    border: 1px solid $border-color;
+    text-align: center;
+    font-size: 13px;
+    line-height: 30px;
+    cursor: default;
+}
+
+.strip-col{
+    width: calc(100% / 6);
+    float: left;
+    padding: 0;
+}
+.modal-bid-offer .modal-body .form-group.form-group_strip{
+    padding: 0;
+    margin: 0;
+}
+.month-selected{
+    background-color: #ECEEF7;
+}
+.month-selected-limit{
+    background-color: $text-off;
+    color: #fff;
+    position: relative;
+    &.month-clickable{
+        &:after{
+            content: 'X';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background-color: $text-off;
+            opacity: 0;
+            transition: 200ms;
+        }
+    &:hover{
+        &:after{
+            opacity: 1;
+        }
+    }
+    }
+    
+}
+.form-group_strip{
+    select{
+        font-size: 11px !important;
+    height: 32px !important;
+    margin-bottom: 5px !important;
+        padding: 0 0 0 10px;
+        line-height: 32px;
+    }
+}
+.strip-date-field{
+    padding: 0 8px;
+    margin-bottom: 5px;
+    .strip-col{
+        &:last-child{
+            .month{
+            border-radius: 0 20px 20px 0;
+            }
+        }
+        &:first-child{
+            .month{
+            border-radius: 20px 0 0 20px;
+            &:after{
+                border-radius: 20px 0 0 20px;
+            }
+            }
+        }
+    }
+}
+.strip__fieldset{
+    padding: 0 5px;
+    margin-bottom: 5px;
+}
+.strip__like-input{
+    height: 40px;
+    border: 1px solid $border-color;
+    display: block;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0 15px;
+    background-color: #e9ecef;
+    pointer-events: none;
+}
+a.show-more-strips {
+    margin: 5px 0;
+    display: block;
+}
+.month-clickable{
+    cursor: pointer;
+    transition: 300ms;
+    &:hover{
+        background-color: #ECEEF7;
+    }
+}
+.trading-interests-list__extra-info_strip{
+    .strip-table{
+        thead{
+            td{
+                padding: 10px 8px;
+                font-weight: bolder;
+                &:first-child{
+                    width: 30px;
+                }
+            }
+        }
+        tbody {
+                height: 174px;
+            td{
+                padding: 10px 8px;
+                &:first-child{
+                    width: 30px;
+                }
+            }
+            box-shadow: inherit;
+            tr:nth-child(even) {
+                background-color: inherit;
+            }
+        }
+        tr{
+            border-bottom: 1px solid $border-color;
+        }
+    }
+    .strip__more-info {
+        width: 50%;
+        float: left;
+        padding-left: 25px;
+        padding-top: 10px;
+    }
+}
+.strip__table-wrapper{
+        width: 50%;
+        float: left;
+}
+
+.strip-table{
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        max-width: 100%;
+        thead{
+            flex: 0 0 auto;
+            width: calc(100% - 0.9em);
+        }
+        tbody {
+        flex: 0 0 auto;
+        display: block;
+        overflow-y: auto;
+        height: 352px;
+        }
+        tr{
+            width: 100%;
+            display: table;
+            table-layout: fixed;
+            td{
+                &:first-child{
+                    width: 40px;
+                }
+            }
+        }
+    }
+    
+
+.offer .k-strip-count{
+    color: $red;
+}
+.bid .k-strip-count{
+    color: $green;
+}
+.strip__table-wrapper_review {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+@media(max-width:767px){
+    .strip__table-wrapper {
+        width: 100%;
+    }
+    .strip__more-info{
+        padding-left: 0 !important;
+        width: 100% !important;
+    }
+    .sticky-table-body{
+        tr{
+            padding: 7px 0 !important;
+            display: block;
+        }
+        td{
+            padding: 5px 8px !important;
+            &:first-child{
+                display: none;
+            }
+        }
+    }
+    .strip-col{
+        width: calc(100% / 3);
+    }
+    .strip-date-field .strip-col:nth-child(3) .month {
+        border-radius: 0 20px 20px 0;
+    }
+    .strip-date-field .strip-col:nth-child(4) .month {
+        border-radius: 20px 0 0 20px;
+    }
+    .strip-date-field .strip-col .month {
+        margin-bottom: 5px;
+    }
+    .strip-date-field {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,15 @@
+.theme__wrapper--devbot_mode-on {
+  .contextual-menu--devbot {
+    display: unset;
+  }
+}
+
+.theme__wrapper--devbot_mode-off {
+  .contextual-menu--devbot {
+    display: none;
+  }
+}
+
+.fi-br-menu-dots:before {
+  content: "\f1cb";
+}

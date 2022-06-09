@@ -1,0 +1,277 @@
+<% content_for (:html_title) {'Data | '} %>
+<% content_for (:html_desc) {'We help our clients develop their businesses. Different OTC commodities brokers trusted our experience and skills to develop their own trading places.
+'} %>
+
+
+    <div class="hero">
+        <img src="/images/data-header-mobile.png" alt="Big data header - mobile" class="img-fluid w-100 d-block d-sm-none">
+        <img src="/images/data-header.png" alt="Big data header" class="img-fluid w-100 d-none d-sm-block">
+    </div>
+
+    <section class="page-section shadow pt-1">
+        <div class="container">
+          <div class="d-flex justify-content-center mb-5">
+            <%= link_to "<div class='margin-none'>#{html_snippet("data.main_section.call_to_action", "en")}</div>".html_safe,
+                        new_contact_path(
+                          contact: { type: "daily_data"},
+                          return_to: data_path(),
+                          ),
+                        id: "btn-free-trial",
+                        class: "btn btn-primary mt-4 ps-5 pe-5",
+                        data: {
+                          controller: "modal",
+                          action: "modal#show",
+                          'modal-target': "modal-dialog-center-l"
+                        }
+            %>
+          </div>
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="section-title section-title_center section-title_no-content">
+                        <h2 class="section-title__header--light px-3">
+                          <span><div class="margin-none"><%= html_snippet("data.main_section.title", "en") %></div></span>
+                        </h2>
+                        <div class="section-title__sub-header">
+                          <div class="margin-none">
+                            <%= html_snippet("data.main_section.subtitle", "en") %>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-12 col-lg-6 pt-3">
+                <div class="focus">
+                    <div class="focus__img">
+                        <img src="/images/data-icon-1.svg" alt="">
+                    </div>
+                    <div class="focus__label">
+                      <div class="margin-none">
+                        <%= html_snippet("data.main_section.item1", "en") %>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 pt-3">
+                <div class="focus">
+                    <div class="focus__img">
+                        <img src="/images/data-icon-2.svg" alt="">
+                    </div>
+                    <div class="focus__label">
+                      <div class="margin-none">
+                        <%= html_snippet("data.main_section.item2", "en") %>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 pt-3">
+                <div class="focus">
+                    <div class="focus__img">
+                        <img src="/images/data-icon-3.svg" alt="">
+                    </div>
+                    <div class="focus__label">
+                      <div class="margin-none">
+                        <%= html_snippet("data.main_section.item3", "en") %>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 pt-3">
+                <div class="focus">
+                    <div class="focus__img">
+                        <img src="/images/data-icon-4.svg" alt="">
+                    </div>
+                    <div class="focus__label">
+                      <div class="margin-none">
+                        <%= html_snippet("data.main_section.item4", "en") %>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="section-title section-title_center section-title_no-content">
+                        <h2 class="section-title__header--light">
+                          <span><div class="margin-none"><%= html_snippet("data.what_we_offer_section.title", "en") %></div></span>
+                        </h2>
+                        <div class="section-title__sub-header section-title__sub-header_large_black">
+                                <%= html_snippet("data.what_we_offer_section.text1", "en")  %>
+                            <br>
+                              <%= html_snippet("data.what_we_offer_section.text2", "en") %>
+                              <%= html_snippet("data.what_we_offer_section.text3", "en") %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section--small">
+        <div class="container">
+            <div class="data-pack__container">
+                <div class="row g-0">
+                    <div class="col-24 col-xl-10 col-lg-14">
+                        <img src="/images/data-historical.jpg" class="img-fluid d-none d-lg-block" alt="data historical">
+                        <img src="/images/data-historical-mobile.jpg" class="img-fluid d-block d-lg-none" alt="data historical">
+                    </div>
+                    <div class="col">
+                        <div class="card-body me-4">
+                            <div class="section-title position-relative">
+                                <div class="position-absolute top-0 end-0 d-none d-sm-block d-lg-none d-xl-block d-xs-none">
+                                    <img src="/images/lock_icon.png" alt="">
+                                </div>
+                                <div class="indicator__new position-absolute p-1 d-lg-none d-xl-block">
+                                  <div class="margin-none"><%= html_snippet("data.what_we_offer_section.card1.icon_text", "en")  %></div>
+                                </div>
+                                <div class="section-title__header--light">
+                                  <small class="fs-5 text-secondary"><div class="margin-none"><%= html_snippet("data.what_we_offer_section.card1.type_title", "en") %></div></small>
+                                  <span><div class="margin-none"><%= html_snippet("data.what_we_offer_section.card1.pack_name", "en") %></div></span>
+                                  <div class="margin-none"><%= html_snippet("data.what_we_offer_section.card1.pack_subname", "en") %></div>
+                                </div>
+                            </div>
+                            <div class="text-with-image__content">
+                                <h4 class="fs-5 text-with-image__text-title">
+                                  <div class="margin-none"><%= html_snippet("data.what_we_offer_section.card1.text1", "en") %></div>
+                                </h4>
+                                <%= html_snippet("data.what_we_offer_section.card1.text2", "en") %>
+                                <div class="margin-none"><%= html_snippet("data.what_we_offer_section.card1.text3", "en") %></div>
+                            </div>
+                            <div class="data-pack__cta">
+                               <%= link_to "<div class='margin-none'>#{html_snippet("data.what_we_offer_section.card1.btn", "en")}</div>".html_safe,
+                                          new_contact_path(
+                                            contact: { type: "historical_data"},
+                                            return_to: data_path(),
+                                            ),
+                                          id: "btn-historical-data",
+                                          class: "btn-outline-data",
+                                          data: {
+                                            controller: "modal",
+                                            action: "modal#show",
+                                            'modal-target': "modal-dialog-center-l"
+                                          }
+                              %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section--small mb-5">
+        <div class="container">
+            <div class="data-pack__container">
+                <div class="row g-0">
+                    <div class="col-xl-10 col-lg-14">
+                        <img src="/images/data-daily.jpg" class="img-fluid d-none d-lg-block" alt="data daily">
+                        <img src="/images/data-daily-mobile.jpg" class="img-fluid d-block d-lg-none" alt="data daily">
+                    </div>
+                    <div class="col">
+                        <div class="card-body me-4">
+                            <div class="section-title position-relative">
+                                <div class="position-absolute top-0 end-0 d-none d-sm-block d-lg-none d-xl-block d-xs-none">
+                                    <img src="/images/daily_icon.png" alt="">
+                                </div>
+                                <div class="indicator__new position-absolute p-1 d-lg-none d-xl-block">
+                                  <div class="margin-none"><%= html_snippet("data.what_we_offer_section.card2.icon_text", "en")  %></div>
+                                </div>
+                                <div class="section-title__header--light">
+                                    <small class="fs-5 text-secondary"><div class="margin-none"><%= html_snippet("data.what_we_offer_section.card2.type_title", "en") %></div></small>
+                                    <span><div class="margin-none"><%= html_snippet("data.what_we_offer_section.card2.pack_name", "en") %></div></span>
+                                  <div class="margin-none"><%= html_snippet("data.what_we_offer_section.card2.pack_subname", "en") %></div>
+                                </div>
+                            </div>
+                            <div class="text-with-image__content">
+                                <h4 class="fs-5 text-with-image__text-title">
+                                  <div class="margin-none">
+                                    <%= html_snippet("data.what_we_offer_section.card2.text1") %>
+                                  </div>
+                                </h4>
+                              <div class="margin-none"><%= html_snippet("data.what_we_offer_section.card2.text2", "en") %></div>
+                            </div>
+                            <div class="data-pack__cta">
+                              <%= link_to "<div class='margin-none'>#{html_snippet("data.what_we_offer_section.card2.btn", "en")}</div>".html_safe,
+                                          new_contact_path(
+                                            contact: { type: "daily_data"},
+                                            return_to: data_path(),
+                                            ),
+                                          id: "btn-daily-data",
+                                          class: "btn-outline-data",
+                                          data: {
+                                            controller: "modal",
+                                            action: "modal#show",
+                                            'modal-target': "modal-dialog-center-l"
+                                          }
+                              %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--    <section class="page-section page-section_bg_gray page-section_padding_30">
+        <div class="container">
+            <div class="text-with-image">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-with-image__text">
+                            <div class="focus focus_horizontal">
+                                <div class="focus__img">
+                                    <img src="/images/network.svg" alt="">
+                                </div>
+                                <div class="focus__title">Sugar physical brokerage in the world market</div>
+                            </div>
+                            <div class="focus focus_horizontal">
+                                <div class="focus__img">
+                                    <img src="images/ico2.svg" alt="">
+                                </div>
+                                <div class="focus__title">Commodities trading platform development</div>
+                            </div>
+                            <div class="focus focus_horizontal">
+                                <div class="focus__img">
+                                    <img src="images/ico-3.svg" alt="">
+                                </div>
+                                <div class="focus__title">Quantitative Research</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="text-with-image__image">
+                            <img src="images/solutions-img-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    
+    
+
+
+
+
+
+
+
+    <!-- <section class="page-section page-section_bg_gray page-section-linkedin">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-24">
+                    <div class="section-title section-title_center">
+                        <h2 class="section-title__header">
+                            Latest <span>Linkedin Feeds</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->

@@ -1,0 +1,106 @@
+.center-block {
+    box-sizing: border-box;
+    justify-content: center;
+    max-width: 100vw;
+
+    // Invisible scroll --- should be backport to Oscar
+    max-height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none; // Edge
+    scrollbar-width: none; // Firefox
+    &::-webkit-scrollbar {display: none;} // Chrome, Safari & Opera
+
+    h2 {
+        margin-bottom: .5rem;
+    }
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        margin-bottom: 15px;
+    }
+    &__app {
+        text-align: center;
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__header {
+        width: fit-content;
+        max-width: 100%;
+        margin: auto;
+        margin-top: 10px;
+        padding-bottom: 20px;
+
+        #alert {
+            text-align: center;
+            padding: 0px 50px;
+        }
+        #notice {
+            text-align: center;
+            padding: 0px 50px;
+        }
+    }
+    &__content {
+        margin: auto;
+        width: fit-content;
+        min-width: 400px;
+        justify-content: left;
+        border-radius: .25rem;
+        padding: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .field {
+        margin-bottom: 10px;
+        input {
+            &[type=email], &[type=password], &[type=text] {
+                @extend .form-control;
+                margin-top: .5rem;
+            }
+
+            &[type=checkbox] {
+                @extend .form-check-input;
+                margin-right: .5rem;
+                margin-top: -2px;
+                vertical-align: middle;
+            }
+        }
+
+        &_with_errors {
+            ~ br {
+                display: none;
+            }
+            ~ em {
+                display: inline-block;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+
+        > input {
+            @extend .btn;
+            margin-bottom: 25px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        line-height: 2;
+    }
+
+    #error_explanation {
+        margin-bottom: 10px;
+        li {
+            margin-left: 20px;
+        }
+    }
+}

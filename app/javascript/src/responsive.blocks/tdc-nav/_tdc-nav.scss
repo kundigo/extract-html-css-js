@@ -1,0 +1,119 @@
+.tdc-nav{
+    width: 100%;
+    display: none;
+    padding: 0 15px;
+    &.show{
+        display: block;
+    }
+}
+.nav-top {
+    padding: 0;
+}
+.navbar-header {
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid $border-color;
+}
+.navbar-toggler {
+    float: right;
+    border: none;
+    margin-top: 3px;
+    color: transparent !important;
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+.nav{
+    width: 100%;
+    .dropdown-menu{
+        padding: 10px 20px;
+    }
+    & > li{
+        border-bottom: 1px solid $border-color;
+        
+        & > a{
+                padding: 0 5px;
+        }
+    }
+    .impersonate {
+        .tdc-nav__form .selectize-control.form-control input{
+            border: none;
+            background-color: inherit;
+            padding: 0 5px;
+            color: $text-off;
+            &::placeholder{
+                color: $text-off;
+            }
+        }
+    }
+    &.tdc-nav__group_right{
+        &> li{
+            &:last-child{
+                border: none;
+            }
+        }
+    }
+}
+.dropdown-menu {
+    border: none;
+    .tdc-nav__item{
+        padding-left: 5px;
+        font-size: 14px;
+    }
+}
+.dropdown-toggle::after{
+    float: right;
+    margin-top: 20px;
+}
+.nav-bottom {
+    padding: 0 15px 10px;
+    .actions{
+        text-align: center;
+        .kill-all{
+            position: relative;
+            transform: inherit;
+            display: inline-block;
+            right:unset;
+        }
+        .my-positions {
+            position: relative;
+            transform: inherit;
+            display: inline-block;
+            right:unset;
+        }
+
+        .send-notifications {
+            position: relative;
+            transform: inherit;
+            display: inline-block;
+            right:unset;
+        }
+    }
+}
+.commodities-list{
+        text-align: center;
+        li {
+    padding: 0 10px;
+}
+} 
+
+
+.tdc-nav__form {
+    width: 100%;
+    position: relative;
+    &:after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    position: absolute;
+    right: 5px;
+    top: 18px;
+    color: $text-off;
+}
+}

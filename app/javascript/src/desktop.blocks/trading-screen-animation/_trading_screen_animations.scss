@@ -1,0 +1,166 @@
+.trading-interests-list__item.recently-published {
+  animation: blinkerCreate 1s linear $flashing-duration;
+}
+
+.trading-interests-list__item.recently-canceled {
+  animation: blinkerCancel 1s linear $flashing-duration;
+}
+
+.trading-interests-list__item.recently-booked {
+  animation: blinkerBook 1s linear $flashing-duration;
+}
+// ######## Animations START #########
+
+/*flashing rows*/
+
+
+
+@keyframes blinkerCreate {
+  0% {
+    background-color: rgba(168,221,193,0);
+  }
+  50% {
+    background-color: rgba(168,221,193,1);
+  }
+  100% {
+    background-color: rgba(168,221,193,0);
+  }
+}
+
+@keyframes blinkerCancel {
+  0% {
+    background-color: rgba(255, 167, 161, 0);
+  }
+  50% {
+    background-color: rgba(255, 167, 161, 1);
+  }
+  100% {
+    background-color: rgba(255, 167, 161, 0);
+  }
+}
+
+@keyframes blinkerBook {
+  0% {
+    background-color: rgba(176, 211, 251, 0);
+  }
+  50% {
+    background-color: rgba(176, 211, 251, 1);
+  }
+  100% {
+    background-color: rgba(176, 211, 251, 0);
+  }
+}
+
+
+
+
+
+
+
+@keyframes priceBlinkCancel {
+  0% {
+    background-color: rgba(176, 211, 251, 1);
+  }
+  50% {
+    background-color: rgba(247, 86, 74, 0);
+    color: $redFont;
+  }
+  100% {
+    background-color: rgba(247, 86, 74, 1);
+  }
+}
+
+@keyframes priceBlinkCreate {
+  0% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+  50% {
+    background-color: rgba(76, 205, 125, 0);
+    color: $redFont;
+  }
+  100% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+}
+
+@keyframes priceBlinkBook {
+  0% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+  50% {
+    background-color: rgba(255, 211, 76, 0);
+    color: $redFont;
+  }
+  100% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+}
+
+@keyframes priceBlinkCancelBid {
+  0% {
+    background-color: rgba(247, 86, 74, 1);
+  }
+  50% {
+    background-color: rgba(247, 86, 74, 0);
+    color: $greenFont;
+  }
+  100% {
+    background-color: rgba(247, 86, 74, 1);
+  }
+}
+
+@keyframes priceBlinkCreateBid {
+  0% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+  50% {
+    background-color: rgba(76, 205, 125, 0);
+    color: $greenFont;
+  }
+  100% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+}
+
+@keyframes priceBlinkBookBid {
+  0% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+  50% {
+    background-color: rgba(255, 211, 76, 0);
+    color: $greenFont;
+  }
+  100% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+}
+
+/* Firefox old*/
+@-moz-keyframes blink {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+
+@-webkit-keyframes blink {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+/* IE */
+@-ms-keyframes blink {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+.animate-time-cancel {
+  -moz-animation:    blink linear 1s infinite; /* Firefox */
+  -webkit-animation: blink linear 1s infinite; /* Webkit */
+  -ms-animation:     blink linear 1s infinite; /* IE */
+  animation:         blink linear 1s infinite; /* Opera and prob css3 final iteration */
+}
+
+// ######## Animations STOP #########
+

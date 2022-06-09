@@ -1,0 +1,25 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    //gap: 4px; // Not supported by Safari
+    width: 100%;
+    margin-bottom: 24px;
+
+    a {
+        text-decoration: none;
+        margin: 8px;
+    }
+
+    & li:first-child {
+        a {
+            font-weight: bold;
+            padding: 0 4px;
+            border-radius: 4px;
+            margin-left: 0px;
+        }
+    }
+
+    & li:last-child {
+        margin-left: 8px;
+    }
+}

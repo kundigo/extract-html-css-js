@@ -1,0 +1,60 @@
+{
+  "application.css": "/packs-test/css/application-2bf3c2f5.css",
+  "application.js": "/packs-test/js/application-37f0b7c2bb3313a0a0f8.js",
+  "application.js.map": "/packs-test/js/application-37f0b7c2bb3313a0a0f8.js.map",
+  "entrypoints": {
+    "application": {
+      "css": [
+        "/packs-test/css/application-2bf3c2f5.css"
+      ],
+      "js": [
+        "/packs-test/js/application-37f0b7c2bb3313a0a0f8.js"
+      ],
+      "js.map": [
+        "/packs-test/js/application-37f0b7c2bb3313a0a0f8.js.map"
+      ]
+    }
+  },
+  "media/codicon/codicon.ttf": "/packs-test/media/codicon/codicon-a609dc0f.ttf",
+  "media/components/reusable/user_presence_status/green_10px.png": "/packs-test/media/components/reusable/user_presence_status/green_10px-02c19d93833dec47e2ba9c4abd784940.png",
+  "media/components/reusable/user_presence_status/grey_10px.png": "/packs-test/media/components/reusable/user_presence_status/grey_10px-9a10e9ffd59998c85a4291cb139881da.png",
+  "media/components/reusable/user_presence_status/orange_10px.png": "/packs-test/media/components/reusable/user_presence_status/orange_10px-1cbcdd585ab9805bd0358b4e32bfaf4c.png",
+  "media/src/fonts/fa-brands-400.eot": "/packs-test/media/src/fonts/fa-brands-400-3165b14bbf3b64fca65829ecde6b800d.eot",
+  "media/src/fonts/fa-brands-400.svg": "/packs-test/media/src/fonts/fa-brands-400-f249e44df3044e7b0d665b550569ddf0.svg",
+  "media/src/fonts/fa-brands-400.ttf": "/packs-test/media/src/fonts/fa-brands-400-f2e186cfab4787d4ef6f1bb192aa9a1b.ttf",
+  "media/src/fonts/fa-brands-400.woff": "/packs-test/media/src/fonts/fa-brands-400-457cb96b6191ed105c4fe8463957f70d.woff",
+  "media/src/fonts/fa-brands-400.woff2": "/packs-test/media/src/fonts/fa-brands-400-f861a57c52ef711cf807a3eec92c0e17.woff2",
+  "media/src/fonts/fa-regular-400.eot": "/packs-test/media/src/fonts/fa-regular-400-a03df7ab0ffc96cabbfe3dc71c60baaa.eot",
+  "media/src/fonts/fa-regular-400.svg": "/packs-test/media/src/fonts/fa-regular-400-2fad4ee0a47f41bc76e21c2baf613182.svg",
+  "media/src/fonts/fa-regular-400.ttf": "/packs-test/media/src/fonts/fa-regular-400-2cd8d991e82712f1a5c5de8ee869ca74.ttf",
+  "media/src/fonts/fa-regular-400.woff": "/packs-test/media/src/fonts/fa-regular-400-7ab2cb050690f93994c46258d49af5b6.woff",
+  "media/src/fonts/fa-regular-400.woff2": "/packs-test/media/src/fonts/fa-regular-400-bd52a727b5449dc3f8195b72c9c58341.woff2",
+  "media/src/fonts/fa-solid-900.eot": "/packs-test/media/src/fonts/fa-solid-900-a547e21eceadf53602caf057be9ad9fd.eot",
+  "media/src/fonts/fa-solid-900.svg": "/packs-test/media/src/fonts/fa-solid-900-fdc155d57b7351ef85b3028ea3cfc048.svg",
+  "media/src/fonts/fa-solid-900.ttf": "/packs-test/media/src/fonts/fa-solid-900-5ee32f5c8598e1a63ddf1aad4ffe54f4.ttf",
+  "media/src/fonts/fa-solid-900.woff": "/packs-test/media/src/fonts/fa-solid-900-657a469469a2fc38a2901c68a3d56512.woff",
+  "media/src/fonts/fa-solid-900.woff2": "/packs-test/media/src/fonts/fa-solid-900-2cd2be177470d5096992572176bbe76e.woff2",
+  "media/src/fonts/feather.eot?v0c02x": "/packs-test/media/src/fonts/feather-9fcfc6894cb92285b18e25ae6f1ec690.eot",
+  "media/src/fonts/feather.svg?v0c02x": "/packs-test/media/src/fonts/feather-5de72ab4c2d8b3c0497414884aafdca3.svg",
+  "media/src/fonts/feather.ttf?v0c02x": "/packs-test/media/src/fonts/feather-1f3e09fbc7939da599ad76e8735ae4f3.ttf",
+  "media/src/fonts/feather.woff?v0c02x": "/packs-test/media/src/fonts/feather-2ea7c8f6244a1bff9633510d5a688012.woff",
+  "media/static/logo.png": "/packs-test/media/static/logo-4bc4654d6f6e50dbe8e87006d280b82a.png",
+  "media/stylesheets/default-theme/20-static/icons/block.svg": "/packs-test/media/stylesheets/default-theme/20-static/icons/block-5de5d1d5c0fb5f1c882f93befd2104d0.svg",
+  "media/stylesheets/default-theme/20-static/icons/eye.svg": "/packs-test/media/stylesheets/default-theme/20-static/icons/eye-1459cb11b538ea99973e8c165d6a8abe.svg",
+  "media/stylesheets/default-theme/20-static/icons/pen.svg": "/packs-test/media/stylesheets/default-theme/20-static/icons/pen-aa056daa060fb0f9371e1c319e46ff76.svg",
+  "media/stylesheets/default-theme/20-static/icons/reorder.svg": "/packs-test/media/stylesheets/default-theme/20-static/icons/reorder-48fd066ecea35ab04650017ec85de399.svg",
+  "media/stylesheets/default-theme/20-static/icons/share.svg": "/packs-test/media/stylesheets/default-theme/20-static/icons/share-0b072b73d5f3b6c77425a0aea705a4af.svg",
+  "media/stylesheets/default-theme/20-static/icons/three-dots-ellipsis.svg": "/packs-test/media/stylesheets/default-theme/20-static/icons/three-dots-ellipsis-e97f3ce22f2b2fecea6ad546d4a54ae1.svg",
+  "media/stylesheets/default-theme/20-static/icons/trash.svg": "/packs-test/media/stylesheets/default-theme/20-static/icons/trash-6ff65cec9867267a629f88352db0e1b8.svg",
+  "media/stylesheets/default-theme/20-static/icons/unblock.svg": "/packs-test/media/stylesheets/default-theme/20-static/icons/unblock-372ef240a12e96f13b708297960c0b01.svg",
+  "media/stylesheets/default-theme/20-static/placeholders/avatar.png": "/packs-test/media/stylesheets/default-theme/20-static/placeholders/avatar-3f28b642568815dd3ddd79ad2238be92.png",
+  "media/stylesheets/default-theme/20-static/webfonts/uicons-bold-rounded.eot": "/packs-test/media/stylesheets/default-theme/20-static/webfonts/uicons-bold-rounded-c75b4d4f13c7bd171b4fd5f95de6a42a.eot",
+  "media/stylesheets/default-theme/20-static/webfonts/uicons-bold-rounded.woff": "/packs-test/media/stylesheets/default-theme/20-static/webfonts/uicons-bold-rounded-3d29c1cd3920a7314eb14d6506301cc8.woff",
+  "media/stylesheets/default-theme/20-static/webfonts/uicons-bold-rounded.woff2": "/packs-test/media/stylesheets/default-theme/20-static/webfonts/uicons-bold-rounded-310dc99465a8a270babe48380c05c463.woff2",
+  "media/stylesheets/default-theme/20-static/webfonts/uicons-regular-rounded.eot": "/packs-test/media/stylesheets/default-theme/20-static/webfonts/uicons-regular-rounded-61a4d4d1f74c9242f7292e8e57ba49d0.eot",
+  "media/stylesheets/default-theme/20-static/webfonts/uicons-regular-rounded.woff": "/packs-test/media/stylesheets/default-theme/20-static/webfonts/uicons-regular-rounded-41c4c5e07ccf1f73bd8e34983961ebc5.woff",
+  "media/stylesheets/default-theme/20-static/webfonts/uicons-regular-rounded.woff2": "/packs-test/media/stylesheets/default-theme/20-static/webfonts/uicons-regular-rounded-3a0475a063e3963063eb8ace7b712db1.woff2",
+  "media/stylesheets/default-theme/20-static/webfonts/uicons-solid-rounded.eot": "/packs-test/media/stylesheets/default-theme/20-static/webfonts/uicons-solid-rounded-7def0ff8489cf519f04b525b7bea8351.eot",
+  "media/stylesheets/default-theme/20-static/webfonts/uicons-solid-rounded.woff": "/packs-test/media/stylesheets/default-theme/20-static/webfonts/uicons-solid-rounded-0bfac326e0db98114d4c923bc362744c.woff",
+  "media/stylesheets/default-theme/20-static/webfonts/uicons-solid-rounded.woff2": "/packs-test/media/stylesheets/default-theme/20-static/webfonts/uicons-solid-rounded-dd9702c9d6cd50d271b7cb5e361a9509.woff2"
+}

@@ -1,0 +1,41 @@
+//**********
+// COLOR VARIABLES
+// preferably in rgb to make it easier to give an opacity if needed
+//**********
+
+//GREYS
+$color-primary: rgb(63, 75, 87); //#3F4B57 // dark grey
+$color-secondary: rgb(96, 113, 125); //#60717D // medium grey
+
+//BLUES
+$color-bg-light: rgb(246, 249, 252); //#F6F9FC // alice blue
+
+// AS Color palette
+$--primary: #3F80EA;
+$--primary-dark: #1659c7;
+$--primary-light: #84aef2;
+$--secondary: #495057;
+
+$--black: #020202;
+$--dark: #293042;
+$--gray: #6c757d;
+$--gray-alt: #CED4D3;
+$--light: #F3F6FB;
+$--white: #fff;
+
+$--success: #4bbf73;
+$--warning: #e5a54b;
+$--danger: #d9534f;
+
+// Devbots Color palette
+$--devbots-blue-dark: #23285C;
+$--devbots-blue-medium: #313563;
+$--devbots-blue: #001FE4;
+$--devbots-blue-light: #A4C0DF;
+$--devbots-gray: #D4DBEC;
+$--devbots-gray-background: #F1F4FB;
+
+$--devbots-success-tx: #124225;
+$--devbots-success-bg: #EFFCF4;
+$--devbots-error-tx: #E40000;
+$--devbots-error-bg: #FFF5F5;

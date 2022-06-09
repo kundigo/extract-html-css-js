@@ -1,0 +1,42 @@
+.specialists {
+    margin: 40px 0;
+    width: 100%;
+    float: left;
+}
+
+.specialists__image,
+.specialists__details {
+    width: 50%;
+    float: left;
+}
+
+.specialists__details {
+    padding-left: 35px;
+}
+
+.specialists__name {
+    font-size: 21px;
+    margin: 30px 0 15px;
+}
+
+.specialists__description {
+    font-size: 15px;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+.specialists__url {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $text-off;
+    text-align: center;
+    font-weight: 500;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,114 @@
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: none;
+    height: 100vh;
+    width: 250px;
+    z-index: 1;
+
+    // Invisible scroll
+    overflow-y: scroll;
+    -ms-overflow-style: none; // Edge
+    scrollbar-width: none; // Firefox
+    &::-webkit-scrollbar {display: none;} // Chrome, Safari & Opera
+
+    &__brand {
+        display: block;
+        padding: 1.15rem 1.5rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    &__logo {
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+        width: 100px;
+    }
+
+    &__content {
+        min-height: calc(-180px + 100vh);
+    }
+
+    &__nav {
+        list-style-type: none;
+        padding-left: 1.5rem;
+    }
+
+    &__search {
+        box-sizing: border-box;
+        border-radius: .2rem;
+        width: 78%;
+        margin-left: 1.5rem;
+        padding: .35rem .75rem;
+    }
+
+    &__header {
+        margin-top: 1.70rem;
+        padding-right: 2rem;
+        position: relative;
+        font-weight: 400;
+        color: $--dark;
+    
+        &-icon--placeholder {
+            display: none;  //deactivated by Dorian. it was  inline-block;
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            margin-bottom: -4px;
+        }
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    &__collapse {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        transform: rotate(45deg);
+        top: 0.4rem;
+        right: 1rem;
+    }
+    
+    &__item {
+        list-style-type: none;
+        margin-left: 30px;
+        margin-right: -0.5rem;
+        padding: 0.5rem 0;
+
+        &--active {
+            @extend .sidebar__item;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__actionList {
+        cursor: pointer;
+        position: sticky;
+        width: 250px;
+        bottom: 0;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    
+        > li {
+            padding: 5px 0;
+    
+            > * {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.filter--notFound {
+    display: none;
+}

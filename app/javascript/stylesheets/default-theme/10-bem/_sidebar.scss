@@ -1,0 +1,168 @@
+
+.sidebar {
+    border: none;
+    width: 275px;
+    background: $--white ;
+
+    &__brand {
+        display: block;
+        padding: 1.15rem 1.5rem;
+        color: $--dark;
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    &__nav {
+        list-style-type: none;
+        padding-left: 1.5rem;
+    }
+
+    &__header {
+        // text-transform: uppercase; // Not part of AS theme
+        padding-bottom: 1.5rem;
+        padding-top: 1.75rem;
+        position: relative;
+        padding-right: 2rem;
+        font-weight: 400;
+        color: $--dark;
+    
+        &-icon--placeholder {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            margin-bottom: -4px;
+            border: 1px solid $--dark;
+        }
+    
+        &:hover {
+            cursor: pointer;
+            color: $--primary-dark;
+
+            > * {
+                border-color: $--primary-dark;
+              }
+        }
+    }
+    
+    &__collapse {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-right: 1px solid $--dark;
+        border-bottom: 1px solid $--dark;
+        transform: rotate(45deg);
+        right: 1rem;
+        top: 2.1rem;
+    }
+    
+      &__item {
+        margin-left: 30px;
+        max-width: 90%;
+        padding-right: 1.5rem;
+        padding-bottom: 1.5rem;
+    
+        &--active {
+            @extend .sidebar__item;
+
+            > a {
+                color: $--primary-dark !important;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 400;
+        color: $--dark;
+
+        &:hover {
+          color: $--primary-dark;
+        }
+    }
+
+    &__actionList {
+        cursor: pointer;
+        position: sticky;
+        bottom: 0;
+        width: inherit;
+        text-align: center;
+        background-color: $--light;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    
+        li {
+            padding: 5px 0;
+    
+            &:hover {
+                background-color: $--primary-light;
+            }
+        }
+    }
+}
+
+.menu__search { // Rename sidebar__search ? Any JS that might break ?
+    box-sizing: border-box;
+    border: none;
+    border-radius: .2rem;
+    width: 78%;
+    margin-left: 1.5rem;
+    padding: .35rem .75rem;
+    background-color: $--light;
+    color: $--dark;
+    font-size: .8rem;
+}
+
+.filter--notFound {
+    display: none;
+}
+
+// DARK THEME
+.theme__wrapper--dark {
+    .sidebar {
+        background-color: $--dark;
+
+        > * {
+        color: $--white;
+        }
+
+        &__header {
+        color: $--white;
+
+            &-icon--placeholder {
+                border: 1px solid $--white;
+            }
+
+            &:hover {
+                color: $--primary-light;
+
+                > * {
+                border-color: $--primary-light;
+                }
+            }
+        }
+
+        &__collapse {
+            border-right: 1px solid $--white;
+            border-bottom: 1px solid $--white;
+        }
+      
+        &__item {
+            &--active {
+                > a {
+                color: $--primary-light !important;
+                }
+            }
+        }
+      
+        &__link {
+            color: $--light;
+        
+            &:hover {
+                color: $--primary-light;
+            }
+        }
+    }
+}

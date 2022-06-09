@@ -1,0 +1,218 @@
+.tdc-nav {
+  width: calc(100% - 225px);
+  float: left;
+}
+.tdc-nav__group_right {
+  float: right;
+  li:last-child {
+    .dropdown-menu {
+      left: inherit;
+      right: 0;
+    }
+  }
+}
+.tdc-nav__group_left {
+  float: left;
+}
+.tdc-nav__group {
+  li {
+    position: relative;
+  }
+  & > li.active {
+    & > a {
+      color: #333;
+      &:after {
+        content: "";
+        width: 32px;
+        height: 2px;
+        background-color: $blue;
+        position: absolute;
+        left: 50%;
+        bottom: 5px;
+        transform: translateX(-50%);
+        border: none;
+        margin-left: 0;
+      }
+      &.custom-data-theme {
+        &:after {
+          background-color: #3c7f61;
+        }
+      }
+    }
+  }
+}
+.tdc-nav__form {
+  position: relative;
+  width: 300px;
+  .form-control {
+    width: 100%;
+    input {
+      border: none;
+      width: 100% !important;
+      &:focus {
+        outline: none;
+      }
+    }
+    .selectize-dropdown {
+      width: 100% !important;
+      overflow: hidden;
+      height: auto;
+      border-radius: 0;
+      position: absolute;
+      left: 0 !important;
+      top: 39px !important;
+      font-size: 14px;
+      background-color: #fff;
+      z-index: 99;
+      border-radius: 20px;
+      padding: 0;
+      .selectize-dropdown-content {
+        padding: 10px 0;
+        & > div {
+          padding: 5px 10px;
+          cursor: pointer;
+          &:hover {
+            background-color: #eee;
+          }
+        }
+      }
+    }
+  }
+
+  .selectize-control.form-control {
+    border: none;
+    padding: 0;
+    input {
+      height: 40px;
+      border: 1px solid $border-color;
+      border-radius: 20px;
+      padding: 0 10px;
+      &:focus {
+        border-color: rgba(49, 0, 255, 0.3) !important;
+        box-shadow: inset 0 0 5px rgba(49, 0, 255, 0.3) !important;
+      }
+    }
+  }
+}
+.tdc-nav__second {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  position: relative;
+  flex-wrap: wrap;
+
+    p {
+        font-weight: bold;
+        padding: 0 20px;
+        margin-bottom: 0px;
+        line-height: 30px;
+    }
+}
+.tdc-nav__separator {
+  width: 1px;
+  height: 70%;
+  background-color: #CCCFDF;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-top {
+  padding: 20px 10px;
+  border-bottom: 1px solid $border-color;
+  width: 100%;
+  float: left;
+}
+.nav-bottom {
+  display: flex;
+  padding: 10px 50px;
+  width: 100%;
+  float: left;
+  div:first-child {
+    padding-right: 20px;
+  }
+  div:nth-child(2) {
+    padding-left: 20px;
+    li.active {
+      a {
+        color: $green-data !important;
+      }
+      &::before {
+        background-color: $green-data;
+      }
+    }
+  }
+}
+.navbar {
+  padding: 0;
+  width: 100%;
+  float: left;
+  overflow: visible;
+}
+.navbar-brand {
+  img {
+    max-width: 150px;
+  }
+}
+.alert-trading {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $purple-trade-light;
+    padding: 10px 25px;
+
+    div:first-child {
+      margin-left: 45px;
+      margin-right: auto;
+    }
+    div:nth-child(2) {
+      margin-right: 20px;
+      color: $blue;
+    }
+
+    button, #send-notifications {
+      height: 30px;
+      line-height: 30px;
+      min-width: 110px;
+      margin-left: 10px;
+    }
+}
+
+.commodity-name {
+    font-weight: bold;
+}
+
+.alert-data {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $green-data-light;
+  padding: 5px 25px;
+  div:first-child {
+    margin-left: 45px;
+    margin-right: auto;
+    ul {
+      display: inline;
+    }
+    li {
+      margin: 5px 10px;
+      border: 2px solid $green-data;
+      border-radius: 6px;
+      padding: 0px;
+      cursor: pointer;
+      a {
+        color: $green-data;
+        padding: 10px;
+      }
+      &.active {
+        background-color: $green-data;
+        a {
+          color: white;
+        }
+      }
+      &:before {
+        background-color: $green-data;
+      }
+    }
+  }
+}

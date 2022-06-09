@@ -1,0 +1,39 @@
+.commodities-list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    li{
+        display: inline-block;
+        padding: 0 20px;
+        line-height: 30px;
+        a{
+            font-weight: 500;
+            color: $text-off;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        .green{
+            i{
+                color: $green;
+            }
+        }
+        &.active{
+            position: relative;
+            a{
+                color: $blue;
+            }
+            &:before{
+                    content: '';
+                    position: absolute;
+                    width: 35px;
+                    height: 2px;
+                    bottom: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: $blue;
+                }
+        }
+    }
+}
+

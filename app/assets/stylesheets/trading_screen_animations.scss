@@ -1,0 +1,195 @@
+
+// ######## Animations START #########
+
+/*flashing rows*/
+
+.k-animate-create, .k-animate-cancel, .k-animate-book {
+  .main-information {
+    .toggle-expanded {
+      > div {
+        min-height: 35px;
+      }
+      .k-price {
+        color: $white;
+      }
+    }
+  }
+}
+
+.k-animate-create .toggle-expanded {
+  .k-count-down, .k-price-description, .k-price {
+    background-color: $createFlash;
+    animation: blinkerCreate 1s linear $flashing-duration;
+  }
+  .k-price {
+    animation: none;
+    animation: priceBlinkCreateBid 1s linear $flashing-duration;
+  }
+}
+
+.k-animate-cancel .toggle-expanded {
+  .k-count-down, .k-price-description, .k-price {
+    background-color: $deleteFlash;
+    animation: blinkerCancel 1s linear $flashing-duration-cancel;
+  }
+  .k-price {
+    animation: none;
+    animation: priceBlinkCancelBid 1s linear $flashing-duration-cancel;
+  }
+
+}
+
+.k-animate-book .toggle-expanded {
+  .k-count-down, .k-price-description, .k-price {
+    background-color: $bookFlash;
+    animation: blinkerBook 1s linear $flashing-duration-book;
+  }
+  .k-price {
+    animation: none;
+    animation: priceBlinkBookBid 1s linear $flashing-duration-book;
+  }
+}
+
+@keyframes blinkerCreate {
+  0% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+  50% {
+    background-color: rgba(76, 205, 125, 0);
+  }
+  100% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+}
+
+@keyframes blinkerCancel {
+  0% {
+    background-color: rgba(247, 86, 74, 1);
+  }
+  50% {
+    background-color: rgba(247, 86, 74, 0);
+  }
+  100% {
+    background-color: rgba(247, 86, 74, 1);
+  }
+}
+
+@keyframes blinkerBook {
+  0% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+  50% {
+    background-color: rgba(255, 211, 76, 0);
+  }
+  100% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+}
+
+@keyframes priceBlinkCancel {
+  0% {
+    background-color: rgba(247, 86, 74, 1);
+  }
+  50% {
+    background-color: rgba(247, 86, 74, 0);
+    color: $redFont;
+  }
+  100% {
+    background-color: rgba(247, 86, 74, 1);
+  }
+}
+
+@keyframes priceBlinkCreate {
+  0% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+  50% {
+    background-color: rgba(76, 205, 125, 0);
+    color: $redFont;
+  }
+  100% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+}
+
+@keyframes priceBlinkBook {
+  0% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+  50% {
+    background-color: rgba(255, 211, 76, 0);
+    color: $redFont;
+  }
+  100% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+}
+
+@keyframes priceBlinkCancelBid {
+  0% {
+    background-color: rgba(247, 86, 74, 1);
+  }
+  50% {
+    background-color: rgba(247, 86, 74, 0);
+    color: $greenFont;
+  }
+  100% {
+    background-color: rgba(247, 86, 74, 1);
+  }
+}
+
+@keyframes priceBlinkCreateBid {
+  0% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+  50% {
+    background-color: rgba(76, 205, 125, 0);
+    color: $greenFont;
+  }
+  100% {
+    background-color: rgba(76, 205, 125, 1);
+  }
+}
+
+@keyframes priceBlinkBookBid {
+  0% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+  50% {
+    background-color: rgba(255, 211, 76, 0);
+    color: $greenFont;
+  }
+  100% {
+    background-color: rgba(255, 211, 76, 1);
+  }
+}
+
+/* Firefox old*/
+@-moz-keyframes blink {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+
+@-webkit-keyframes blink {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+/* IE */
+@-ms-keyframes blink {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+.animate-time-cancel {
+  -moz-animation:    blink linear 1s infinite; /* Firefox */
+  -webkit-animation: blink linear 1s infinite; /* Webkit */
+  -ms-animation:     blink linear 1s infinite; /* IE */
+  animation:         blink linear 1s infinite; /* Opera and prob css3 final iteration */
+}
+
+// ######## Animations STOP #########
+

@@ -1,0 +1,18 @@
+@import "0-abstracts";
+@import "config";
+@import "1-base";
+@import "2-components";
+@import "position";
+@import "3-layout";
+@import "4-pages";
+@import "5-themes";
+
+
+.wrapper {
+    display: flex;
+    justify-content: stretch;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+

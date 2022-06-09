@@ -1,0 +1,28 @@
+.quillWrapper {
+  border: 0 !important;
+  height: 100% !important;
+}
+
+.margin-none p {
+  margin: 0;
+}
+
+.margin-none-yellow p {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.margin-none-heighlight p {
+  font-size: 17px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.margin-none-brokerage-sugar p {
+  margin: 0 0 16px 0;
+}
+
+.quill-editor-br p br {
+  height: 16px
+}
+

@@ -1,0 +1,517 @@
+// Components
+.breadcrumb {
+    a {
+        color: $--devbots-blue;
+    }
+
+    & li:first-child {
+        a {
+            background: $--devbots-blue-dark;
+            color: $--white;
+        }
+    }
+}
+
+.input-block__field, .custom-select, textarea {
+    font-size: .825rem !important;
+    font-family: inherit;
+    color: $--gray !important;
+    border: 1px solid $--devbots-blue-dark !important;
+    background-color: $--devbots-gray !important;
+
+    &--invalid {
+        border: 1px solid $--devbots-error-tx !important;
+        color: $--devbots-error-tx !important;
+    }
+
+    &:disabled {
+        border: 1px solid $--gray-alt !important;
+        background-color: $--devbots-gray-background !important;
+        color: $--gray-alt !important;
+    }
+}
+  
+.input-block {
+    &__append, &__prepend {
+        font-size: .825rem !important;
+        color: $--gray !important;
+        border: 1px solid $--gray !important;
+    }
+}
+
+.input-block {
+    .monaco-editor { // No disabled ?
+        .view-lines, .margin-view-overlays, .margin {
+            // color: $--gray;  // commented by dorian, monaco editor css should be setup via component
+            // background-color: $--devbots-gray; // commented by dorian, monaco editor css should be setup via component
+        }
+        .decorationsOverviewRuler, .invisible.scrollbar {
+            display: none; // probably can be managed via the vue-monaca component options
+        }
+    }
+}
+
+.input-block {
+    .v-select {
+        background-color: $--devbots-gray;
+        border: 1px solid $--devbots-blue-dark !important;
+        font-size: 14px;
+
+        .vs__dropdown-toggle {
+            background-color: $--devbots-gray;
+            color: $--gray !important;
+        }
+        .vs__dropdown-menu {
+            border:1px solid $--devbots-blue-dark;
+            border-top-style:none;
+            background:$--devbots-gray;
+        }
+        .vs__dropdown-option, .vs__selected {
+            font-size: inherit;
+            color: $--gray;
+        }
+        .vs__dropdown-option--highlight {
+            background:$--devbots-blue-dark;
+            color: $--white;
+        }
+        .vs__clear, .vs__open-indicator {
+            fill:$--devbots-blue-dark;
+        }
+        
+        // Error
+        &.is-invalid {
+            border: 1px solid $--devbots-error-tx !important;
+            .vs__selected {
+                color: $--devbots-error-tx;
+            }
+        }
+
+        // Disabled
+        &.vs--disabled {
+            border: 1px solid $--gray-alt !important;
+            background-color: $--devbots-gray-background;
+            .vs__clear, .vs__open-indicator {
+                fill:$--gray-alt;
+            }
+        }
+        &.vs--disabled .vs__clear,
+        &.vs--disabled .vs__dropdown-toggle,
+        &.vs--disabled .vs__open-indicator,
+        &.vs--disabled .vs__search,
+        &.vs--disabled .vs__selected {
+            cursor:not-allowed;
+            background-color:$--devbots-gray-background;
+            color: $--gray-alt;
+        }
+    }
+}
+
+.modal { 
+    &__container {
+      background: $--white;
+    }
+
+    .model-form {
+        &__header {
+            border-bottom: 2px solid lightgray;
+        }
+    
+        &__title {
+            float: left;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+    }
+      
+    .preloader--shown {
+        background: $--white;
+        border: 2px solid $--devbots-blue;
+    }
+    
+    .preloader__wheel {
+        border-right: 2px solid $--devbots-blue;
+    } 
+}
+
+input[type=submit]:disabled {
+    background: $--devbots-gray !important;
+}
+
+.form-validation {
+    &__global-error {
+        color: $--white;
+        background: $--devbots-error-tx;
+    }
+
+    &__tooltip {
+        background: $--devbots-error-bg;
+        color: $--devbots-error-tx;
+        border: 1px solid $--devbots-error-tx;
+    }
+}
+
+
+.sidebar {
+    background: $--white ;
+
+    &__brand {
+        color: $--dark;
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    &__search {
+        border: 1px solid $--devbots-blue-dark;
+        background-color: $--devbots-gray;
+        color: $--dark;
+        font-size: .8rem;
+    }
+
+    &__header {
+        font-weight: 400;
+        color: $--dark;
+    
+        &-icon--placeholder {
+            border: 1px solid $--dark;
+        }
+    
+        &:hover {
+            color: $--primary-dark;
+
+            > * {
+                border-color: $--primary-dark;
+            }
+        }
+    }
+    
+    &__collapse {
+        border-right: 1px solid $--dark;
+        border-bottom: 1px solid $--dark;
+    }
+
+    &__item {
+        &--active {
+            > a {
+                color: $--primary-dark !important;
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        color: $--dark;
+
+        &:hover {
+          color: $--primary-dark;
+        }
+    }
+
+    &__actionList {
+        background-color: $--devbots-blue-dark;
+    
+        > li {
+            &:hover {
+                background-color: $--devbots-blue-medium;
+            }
+            > * {
+                color: $--white;
+            }
+        }
+    }
+}
+
+.table {
+    * {
+        font-size: .825rem !important;
+    }
+
+    thead tr {
+        background-color: $--white;
+        border-bottom: 1px solid $--dark;
+    }
+
+    tr {
+        border-bottom: 1px solid $--gray-alt;
+    }
+
+    th {
+        font-size: 14px;
+    }
+    
+    td {
+        a {
+            color: $--devbots-blue;
+
+            &:hover{
+                color: rebeccapurple;
+            }
+        }
+
+        input[value="Destroy"] {
+            color: $--devbots-blue !important;
+            font-size: .825rem !important;
+        }
+    }
+
+    &--striped tbody tr:nth-of-type(even){
+        background: $--devbots-gray
+    }
+    &-sortable {
+        .table_content-sortable {
+            > div:nth-of-type(even) {
+                background: $--devbots-gray
+            }
+        }
+
+        .table_row {
+            &-header {
+                background: $--white;
+            }
+            &-sortable {
+                >.table_col {
+                    border-bottom: 1px solid $--gray-alt;
+                }
+            }
+        }
+        .table_label {
+            border-bottom: 1px solid $--dark;
+        }
+        .table_col {
+            a {
+                color: $--devbots-blue;
+            }
+
+            .table_action {
+                input[value="Destroy"] {
+                    color: $--devbots-blue !important;
+                    font-size: .825rem !important;
+                }
+            }
+        }
+    }
+}
+
+.pagination {
+    font-family: $--font-monospace;
+
+    &__button {
+        border: 1px solid $--gray-alt;
+
+        > a {
+            color: $--gray;
+        }
+
+        &:hover {
+            background: $--devbots-gray;
+        }
+
+        &--first, &--previous, &--next, &--last {
+            &-disabled, &-disabled:hover {
+                background: $--white;
+                
+                > a {
+                    color: $--gray-alt;
+                }
+            }
+        }
+
+        &--active {
+            background: $--devbots-blue-dark;
+            border: 1px solid $--devbots-blue-dark;
+
+            > a {
+                color: $--white;
+            }
+
+            &:hover {
+                color: $--white;
+                background: $--devbots-blue-dark;
+                border: 1px solid $--devbots-blue-dark;
+            }
+        }
+    }
+}
+
+.action-bar{
+    &__button {
+        font-weight: 400;
+        line-height: 1.5;
+        border: 1px solid transparent;
+        font-size: 1rem;
+        background: $--devbots-blue-dark; 
+  
+      > a {
+        color: $--white;
+      }
+    }
+}
+
+.nav-item {
+    .nav-link {  
+        &__title {
+            a {
+                color: $--devbots-blue-dark;
+            }
+        }
+        &__close {
+            &-cross {
+                color: $--devbots-blue-dark !important;
+            }
+        }
+        &.active {
+            border-bottom: solid 3px $--devbots-blue-dark;
+            &__title a {
+                color: $--devbots-blue-dark;
+            } 
+        }
+    }
+}
+
+// Layout
+.main--theme--light {
+    background: $--devbots-gray-background;
+}
+
+.main {
+    border-right: 1px solid $--gray-alt;
+
+    &__header {
+        background-color: $--white;
+
+        a {
+            color: $--devbots-blue;
+        }
+    }
+
+    &__profile {
+        background-color: lightskyblue;
+    }
+}
+
+.main__content {  
+    .card__action {
+        background-color: $--white;
+        border-top: 1px solid $--dark;
+    }
+}
+
+.model-form {
+    &__actions {
+        input[type=submit] {
+            font-weight: 400;
+            line-height: 1.5;
+            border: 1px solid transparent;
+            font-size: 1rem;
+            background: $--devbots-blue-dark; 
+            color: $--white !important;
+        }
+    }
+}
+
+.devmode {
+    &__dot {
+        background: $--white;
+    }
+
+    &__slider {
+        background: $--devbots-gray;
+    }
+
+    & input {
+        &:checked ~ .devmode__slider {
+            background: $--devbots-blue-dark;
+        }
+    }
+}
+
+.actions-show-screen {
+    &__destroy-action {
+        color: $--devbots-blue !important;
+        font-size: .825rem;
+    }
+}
+
+.main__content--embedded {
+    background: $--white;
+
+    .action-bar--embedded {
+        .action-bar__item {
+            a {
+                color: $--devbots-blue;
+            }
+
+            &--separator {
+                border-right: 2px solid lightgray;
+            }
+        }
+    }
+
+    input {
+        background: $--devbots-gray;
+        border: 1px solid $--devbots-blue-dark;
+
+        &[type=submit] {
+            background: $--devbots-blue-dark;
+        }
+    }
+}
+
+// Pages
+.center-block {
+    h2 {
+        font-size: 1.44rem;
+    }
+
+    &__background {
+        background: $--light;
+    }
+    &__header {
+        font-size: 16.5px;
+
+        #alert {
+            color: $--danger;
+        }
+        #notice {
+            color: $--success;
+        }
+    }
+    &__content {
+        background: $--white;
+        box-shadow: 0 0 0.875rem 0 rgba(41, 48, 66, 0.1);
+    }
+
+    .field {
+        input {
+            &[type=email], &[type=password], &[type=text] {
+                background-color: $--devbots-gray;
+            }
+        }
+
+        &_with_errors {
+            color: $--danger;
+        }
+    }
+
+    .actions {
+        > input {
+            background: $--devbots-blue-dark;
+            color: $--white !important;
+            font-size: .95rem !important;
+        }
+    }
+
+    a {
+        color: $--devbots-blue-dark;
+    }
+
+    #error_explanation {
+        h2 {
+            font-size: 1.10rem;
+            color: $--danger;
+        }
+        li {
+            color: $--danger;
+        }
+    }
+}

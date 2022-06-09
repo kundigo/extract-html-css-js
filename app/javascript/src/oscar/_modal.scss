@@ -1,0 +1,219 @@
+.modal {
+    display: none;
+
+    &.is-open {
+        display: block;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.4);
+        display: flex;
+        justify-content: flex-end;
+        z-index: 2;
+
+        &--center {
+          @extend .modal__overlay;
+          justify-content: center;
+          align-items: center;
+
+          .modal__container {
+            border-radius: 35px;
+          }
+        }
+    }
+  
+    &__container {
+        background: white;
+        padding: 50px;
+        width: 650px;
+        box-sizing: border-box;
+        overflow-y: auto;
+
+        @include modal-form-display-mixin;
+
+        label {
+            @extend .mt-2;
+            @extend .mb-1;
+        }
+
+        .form-validation {
+          input {
+            width: 100%;
+            border-radius: 4px !important;
+          }
+        }
+
+        input:not([type="checkbox"]):not([type="submit"]),
+        .v-select {
+          border-radius: 20px !important;
+        }
+        .v-select {
+          .vs__selected-options {
+            margin-right: auto;
+          }
+          .vs__open-indicator, .vs__clear { // thinner icons in autocomplete
+            fill: $black;
+            stroke: white;
+            stroke-width: 2px;
+          }
+        }
+    }
+    
+  
+    .preloader--hidden {
+      display: none;
+    }
+    .preloader--shown {
+      position: fixed;
+      top: 40px;
+      right: 25px;
+      width: 200px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border: 2px solid lightskyblue;
+      border-radius: 15px;
+      text-align: center;
+      z-index: 3;
+    }
+    
+    .preloader__wheel {
+      width: 22px;
+      height: 22px;
+      border-right: 2px solid lightskyblue;
+      border-radius: 100%;
+      margin-left: 25px;
+      will-change: transform;
+      animation: preloader__wheel-spin 1s infinite linear;
+      z-index: 3;
+    }
+    
+    @keyframes preloader__wheel-spin {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+    }
+    
+    .model-form__title {
+      font-size: 1.25rem;
+    }
+
+    .model-form__header {
+      border-bottom: 2px solid #d3d3d3;
+    }
+
+    .model-form__actions {
+      input[type=submit] {
+          @extend .tdc-btn;
+          @extend .tdc-btn__color_blue;
+          margin-top: 20px;
+      }
+    }
+
+    // digital solution modal
+    @mixin custom-public-modal {
+      margin: -50px;
+      .devbot-template-container__title {
+        margin-bottom: 20px;
+        color: white;
+        height: auto;
+      }
+      .model-form__header {
+        margin: 0;
+        border-bottom: transparent;
+        height: auto;
+        padding: 30px 30px 20px;
+        &::after {
+          visibility: hidden;
+          display: block;
+          font-size: 0;
+          content: "";
+          clear: both;
+          height: 0;
+        }
+        .model-form__close {
+          background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+        }
+      }
+      h1 {
+        position: relative;
+      }
+      h1:after {
+        content: "";
+        width: 60px;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+      }
+      .model-form__subtitle {
+        padding: 0 30px 25px;
+        p {
+          margin-bottom: 0;
+        }
+      }
+      .devbot-template-container__body {
+        margin: 0px 30px 20px;
+
+        .form__field:nth-child(1),
+        .form__field:nth-child(2) {
+          display: inline-block;
+          width: 48%;
+        }
+        .form__field:nth-child(1) {
+          margin-right: calc(-4px + 4%);
+        }
+      }
+      .checkbox__container {
+        display: inline;
+
+        .checkbox {
+          margin-top: -4px;
+        }
+      }
+    }
+    .custom-contact-form {
+      @include custom-public-modal;
+      .devbot-template-container__title {
+        @extend .bg-primary;
+        background-image: url("/images/bg-logo.png");
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+      }
+    }
+
+  .custom-contact-form-data {
+    @include custom-public-modal;
+    .devbot-template-container__title {
+      @extend .bg-success;
+    }
+    .form-validation input {
+      background-color: #00b381;
+    }
+  }
+}
+.model-form__actions .form-validation__global-error {
+  display: none !important;
+}
+.gdpr-checkbox .input-block__error-feedback{
+   margin-left: 0 !important;
+}
+// Prevent autocomplete dropdown to go under
+.modal-content .input-block__prepend, 
+.modal-content .input-block__append,
+.modal-content .input-block__field, 
+.modal-content .input-block__field--invalid {
+  z-index: 1 !important;
+}
+
+// display 'BACK' action in modals
+.modal-content .model-form__return {
+  display: none
+}

@@ -1,0 +1,139 @@
+
+.trading-interests-list{
+    text-align: center;
+}
+
+
+// Elements
+.trading-interests-list__header{
+    color: $text-off;
+    font-weight: 500;
+    padding: 15px 15px 10px;
+    word-break: break-all;
+}
+.trading-interests-list__extra-info{
+    display: none;
+    &.expanded{
+        display: block;
+    }
+
+}
+.trading-interests-list__items {
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    overflow: hidden;
+    .trading-interests-list__item:nth-child(even){
+        background-color: $table-alternative-bg;
+    }
+    &.offers{
+        .k-price{
+            color: $red;
+            text-align: left;
+        }
+    }
+    &.bids{
+        .k-price{
+            color: $green;
+            text-align: right;
+        }
+    }
+}
+.trading-interests-list{
+    &.bids{
+        .trading-interests-list__header{
+            .k-price{
+                    text-align: right;
+                }
+        }
+    }
+    &.offers{
+        .trading-interests-list__header{
+            .k-price{
+                    text-align: left;
+                }
+        }
+    }
+}
+
+.trading-interests-list__item {
+    // font-size: 16px;
+    font-weight: 500;
+    padding: 15px;
+    line-height: 18px;
+    overflow: hidden;
+    i{
+        color: $text-off;
+    }
+    a.action{
+        display: block;
+        text-align: center;
+        //position: absolute;
+        width: 100%;
+        left: 0;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(70%);
+        }
+        &.action-unfold{
+            display: none;
+        }
+    }
+    &.expanded{
+        .trading-interests-list__extra-info{
+            display: block;
+            border-top: 1px solid #ccc;
+            margin-top: 8px;
+            padding-top: 15px;
+        }
+    }
+    &.expanded{
+        a.action{
+            &.action-unfold{
+                display: block;
+            }
+            &.action-fold{
+                display: none;
+            }
+        }
+    }
+}
+.trading-interests-list__extra-info-row{
+    padding: 5px 0;
+    text-align: left;
+}
+
+.trading-interests-list__extra-info{
+    td {
+    font-size: 10px;
+    }
+}
+
+.k-clock{
+    i{
+        font-size: 18px;
+    }
+}
+// .trading-interests-list__main-info{
+//     &>div{
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//     }
+    
+// }
+.price-recap{
+    span{
+        //display: inline-block !important;
+        &.k-futures-contract{
+            padding: 0 5px;
+        }
+    }
+}
+.k-deep_sea_port{
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+}
+.k-specific-terms{
+    color: $red;
+}

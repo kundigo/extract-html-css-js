@@ -1,0 +1,46 @@
+@import "vue-select/src/scss/vue-select";
+
+.vs--open{
+    border-color: rgba(49, 0, 255, 0.3) !important;
+    box-shadow: inset 0 0 5px rgba(49, 0, 255, 0.3) !important;
+}
+.vs__dropdown-toggle {
+    border: none;
+}
+.v-select {
+    padding-right: 5px;
+}
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    padding-right: 25px;
+    background-image: none !important;
+}
+.vs__search:focus{
+    border: none !important;
+}
+.vs__clear {
+    display: none;
+}
+.vs__search {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.vs__dropdown-toggle {
+    height: 28px;
+}
+.vs__selected {
+    padding-left: 0;
+    margin-left: 0;
+}
+.custom-select{
+    appearance: none;
+}
+span.vs__selected {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.vs__selected-options{
+    max-width:90%;
+}

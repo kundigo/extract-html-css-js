@@ -1,0 +1,21 @@
+.nav-tabs {
+    margin-bottom: 15px;
+}
+.nav-item {
+    .nav-link {  
+        &__title {
+            padding-top: 2px;
+            a {
+                text-decoration: none;
+            }
+        }
+        &__close {
+            &-cross {
+                @extend .btn;
+                line-height: normal;
+                text-decoration: none;
+                padding: 0px 0px 0px 12px;
+            }
+        }
+    }
+}

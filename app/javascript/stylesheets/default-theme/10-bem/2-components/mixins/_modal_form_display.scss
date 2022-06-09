@@ -1,0 +1,29 @@
+@mixin modal-form-display-mixin {
+  .model-form {
+    &__header {
+      height: 40px;
+      margin-bottom: 20px;
+      display: block;
+    }
+    &__title {
+      float: left;
+    }
+    &__close {
+      @extend .btn-close;
+      display: block;
+      float: right;
+
+      > span {
+        @extend .btn-close;
+        opacity: 0;
+
+        &:hover {
+          opacity: 0;
+        }
+      }
+    }
+    &__return {
+      display: none;
+    }
+  }
+}

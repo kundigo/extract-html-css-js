@@ -1,0 +1,39 @@
+body {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+}
+
+nav {
+    height: 60px;
+    background-color: #FFF;
+    text-align: left;
+}
+
+.logo > a > img{
+
+    height: 30px;
+    padding: 15px 15px;
+}
+
+
+div.dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+div.dialog > p {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}

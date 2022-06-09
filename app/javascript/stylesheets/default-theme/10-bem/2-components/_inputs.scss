@@ -1,0 +1,298 @@
+.input-block {
+    @extend .input-group;
+    @extend .mt-2;
+    @extend .mb-3;
+
+    &__text {
+        @extend .input-group-text;
+    }
+
+    &__append, &__prepend {
+        @extend .input-group-text;
+    }
+
+    &__error-feedback {
+        @extend .invalid-feedback;
+    }
+    &__warning-feedback {
+        display: block;
+        width: 100%;
+        margin-top: 4px;
+        font-size: 11.5px;
+        color: $--warning;
+    }
+
+    &__field {
+        @extend .form-control;
+
+        &--invalid {
+            @extend .is-invalid;
+        }
+    }
+}
+
+.checkbox {
+    position: absolute;
+    margin-bottom: -2px;
+    top: 6px;
+    left: 0;
+
+    &__container {
+    position: relative;
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding-left: 25px;
+    line-height: 2;
+
+        > .input-block__error-feedback, > .input-block__warning-feedback {
+            margin-left: -25px;
+        }
+    }
+}
+
+.custom-select {
+    @extend .form-select;
+    height: 38px;
+}
+
+.editor {
+    min-height: 300px;
+}
+
+
+// Vue Select - Autocomplete
+.input-block {
+    .v-select {
+        position:relative;
+        font-family:inherit;
+        height: 38px;
+       }
+       .v-select,
+       .v-select * {
+        box-sizing:border-box
+       }
+       @-webkit-keyframes vSelectSpinner {
+        0% {
+         transform:rotate(0deg)
+        }
+        to {
+         transform:rotate(1turn)
+        }
+       }
+       @keyframes vSelectSpinner {
+        0% {
+         transform:rotate(0deg)
+        }
+        to {
+         transform:rotate(1turn)
+        }
+       }
+       .v-select[dir=rtl] .vs__actions {
+        padding:3px 4px 0;
+       }
+       .v-select[dir=rtl] .vs__clear {
+        margin-left:6px;
+        margin-right:0
+       }
+       .v-select[dir=rtl] .vs__deselect {
+        margin-left:0;
+        margin-right:2px
+       }
+       .v-select[dir=rtl] .vs__dropdown-menu {
+        text-align:right
+       }
+       .vs__dropdown-toggle {
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        display:flex;
+        padding:4px;
+        padding-left: 12px;
+        background:none;
+        border-radius:4px;
+        white-space:normal;
+        margin: -6px;
+        margin-left: -12px;
+       }
+       .vs__selected-options {
+        display:flex;
+        flex-basis:100%;
+        flex-grow:1;
+        flex-wrap:wrap;
+        padding:0 2px;
+        position:relative
+       }
+       .vs__actions {
+        display:flex;
+        align-items:center;
+        padding: 3px 4px 0;
+       }
+       .vs--searchable .vs__dropdown-toggle {
+        cursor:text
+       }
+       .vs--unsearchable .vs__dropdown-toggle {
+        cursor:pointer
+       }
+       .vs--open .vs__dropdown-toggle {
+        border-bottom-color:transparent;
+        border-bottom-left-radius:0;
+        border-bottom-right-radius:0
+       }
+       .vs__open-indicator {
+        fill:rgba(60,60,60,.5);
+        transform:scale(1);
+        transition:transform .15s cubic-bezier(1,-.115,.975,.855);
+        transition-timing-function:cubic-bezier(1,-.115,.975,.855)
+       }
+       .vs--open .vs__open-indicator {
+        transform:rotate(180deg) scale(1)
+       }
+       .vs--loading .vs__open-indicator {
+        opacity:0
+       }
+       .vs__clear {
+        padding:0;
+        border:0;
+        background-color:transparent;
+        cursor:pointer;
+        margin-right:8px
+       }
+       .vs__dropdown-menu {
+        display:block;
+        box-sizing:border-box;
+        position:absolute;
+        top:calc(100% - 1px);
+        left:0;
+        z-index:1000;
+        padding:5px 0;
+        margin:0;
+        margin-left: -1px;
+        width:calc(100% + 2px);
+        max-height:350px;
+        min-width:160px;
+        overflow-y:auto;
+        box-shadow:0 3px 6px 0 rgba(0,0,0,.15);
+        border-radius:0 0 4px 4px;
+        text-align:left;
+        list-style:none;
+       }
+       .vs__no-options {
+        text-align:center
+       }
+       .vs__dropdown-option {
+        line-height:1.42857143;
+        display:block;
+        padding:3px 20px;
+        clear:both;
+        white-space:nowrap
+       }
+       .vs__dropdown-option:hover {
+        cursor:pointer
+       }
+       .vs__dropdown-option--disabled:hover {
+        cursor:inherit
+       }
+       .vs__selected {
+        display:flex;
+        align-items:center;
+        line-height:1.4;
+        padding:3px 4px 0;
+        z-index:0
+       }
+       .vs__deselect {
+        display:inline-flex;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        margin-left:4px;
+        padding:0;
+        border:0;
+        cursor:pointer;
+        background:none;
+        fill:rgba(60,60,60,.5);
+       }
+       .vs--single .vs__selected {
+        background-color:transparent;
+        border-color:transparent
+       }
+       .vs--single.vs--open .vs__selected {
+        position:absolute;
+        opacity:.4
+       }
+       .vs--single.vs--searching .vs__selected {
+        display:none
+       }
+       .vs__search::-webkit-search-cancel-button {
+        display:none
+       }
+       .vs__search::-ms-clear,
+       .vs__search::-webkit-search-decoration,
+       .vs__search::-webkit-search-results-button,
+       .vs__search::-webkit-search-results-decoration {
+        display:none
+       }
+       .vs__search,
+       .vs__search:focus {
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        line-height:1.4;
+        font-size:1em;
+        border:1px solid transparent;
+        border-left:none;
+        outline:none;
+        margin:4px 0 0;
+        padding:0 7px;
+        background:none;
+        box-shadow:none;
+        width:0;
+        max-width:100%;
+        flex-grow:1;
+        z-index:1
+       }
+       .vs__search::-webkit-input-placeholder {
+        color:inherit
+       }
+       .vs__search::-moz-placeholder {
+        color:inherit
+       }
+       .vs__search:-ms-input-placeholder {
+        color:inherit
+       }
+       .vs__search::-ms-input-placeholder {
+        color:inherit
+       }
+       .vs__search::placeholder {
+        color:inherit
+       }
+       .vs--unsearchable .vs__search {
+        opacity:1
+       }
+       .vs--unsearchable:not(.vs--disabled) .vs__search:hover {
+        cursor:pointer
+       }
+       .vs--single.vs--searching:not(.vs--open):not(.vs--loading) .vs__search {
+        opacity:.2
+       }
+}
+
+
+
+// Override bootstrap border-radius changes
+.input-block {
+    .input-block__prepend {
+        border-radius: 4px 0 0 4px !important;
+    }
+    .input-block__append {
+        border-radius: 0 4px 4px 0 !important;
+    }
+    :not(.input--has-prepend):not(.input-block__append):not(.invalid-feedback){
+        border-top-left-radius: 4px !important;
+        border-bottom-left-radius: 4px !important;
+    }
+    :not(.input--has-append):not(.input-block__prepend):not(.invalid-feedback){
+        border-top-right-radius: 4px !important;
+        border-bottom-right-radius: 4px !important;
+    }
+}

@@ -1,0 +1,41 @@
+$color-primary: rgb(63, 75, 87); //#3F4B57 // dark grey
+$color-secondary: rgb(96, 113, 125); //#60717D // medium grey
+
+$color-bg-light: rgb(246, 249, 252); //#F6F9FC // alice blue
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins';
+    line-height: 1.5;
+    font-size: .825rem;
+    color: $--devbots-blue-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $--devbots-blue-dark;
+}
+
+h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    @extend .mb-3;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+a {
+    color: $--devbots-blue;
+    text-decoration: none;
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}

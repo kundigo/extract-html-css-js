@@ -1,0 +1,234 @@
+body{
+    font-family: $primary-font;
+    font-size: 14px;
+    color: $body-text-color;
+}
+.application-layout {
+    margin: 50px 0;
+    width: 100%;
+    float: left;
+}
+#flash-messages {
+    width: 100%;
+    float: left;
+}
+a{
+    text-decoration: none;
+    margin-bottom: 0;
+}
+.alert-dismissible .close {
+    position: absolute;
+    right: 0;
+    color: inherit;
+    span{
+        font-size: 1rem;
+        font-weight: bolder;
+        padding: 1rem;
+    }
+}
+button.close{
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-link {
+    text-decoration: none !important;
+}
+.app-title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    padding: 20px $card-padding;
+    border-bottom: 2px solid $border-color;
+    margin: 0;
+    h1 {
+        font-size: 25px;
+    }
+    h1:before{
+        content: '';
+        width: $title-deco-width;
+        height: 1px;
+        border-bottom: 2px solid;
+        bottom: 18px;
+        position: absolute;
+    }
+    .tdc-btn {
+        width: 150px;
+    }
+    &.app-title_deco-color_green:before{
+        border-color: $green-dark;
+    }
+    &.app-title_deco-color_blue:before{
+        border-color: $blue;
+    }
+    &.app-title_deco-color_red:before{
+        border-color: $red;
+    }
+}
+
+.application-card {
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    border-radius: 15px;
+}
+.app-content{
+    padding: $card-padding;
+}
+
+#navbar{
+    & + .container-fluid{
+        min-height: calc(100vh - 213px);
+    }
+}
+.application-layout{
+    min-height: calc(100vh - 245px);
+}
+
+.margin-top_20{
+    margin-top: 20px;
+}
+
+.w-30{
+    width: 30%;
+}
+.w-20{
+    width: 20%;
+}
+
+
+// Bootstrap overwritten
+@media (min-width: 1200px){
+    .container{
+    max-width: 1140px !important;
+    }
+}
+
+.container-fluid {
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 100%;
+    float: left;
+}
+.navbar{
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    background-color: #fff;
+}
+.nav-tabs {
+    border: none;
+}
+.nav{
+    & > li{
+        .tdc-nav__item.dropdown-item {
+            padding: 0 !important;
+            white-space: pre-line !important;
+            &.language_options__flag{
+                img{
+                    display: block;
+                    width: 1rem;
+                    margin: auto;
+                }
+            }
+        }
+
+        & > a{
+            font-weight: 500;
+            color: $text-off;
+            padding: 0 20px;
+            line-height: 40px;
+            display: block;
+            
+            &:hover{
+                text-decoration: none;
+                filter: brightness(70%);
+            }
+        }
+        a{
+            color: $text-off; 
+            img{
+                display: none;
+            }
+
+        }
+    }
+
+    .dropdown-menu{
+        min-width: 250px;
+        border-radius: 0;
+        border-top: 0;
+        top: 57px;
+        left: 0;
+        &.tdc-nav__item_account{
+            min-width: 155px;
+        }
+        li.tdc-nav__item.dropdown-item {
+        &:hover {
+            background-color: transparent;
+        }
+        }
+
+    }
+}
+.navbar-header {
+    float: left;
+    width: 225px;
+}
+.tdc-nav__item{
+    a{
+        padding: 10px;
+        display: block;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+.language_options{
+    display: flex;
+}
+
+.input-group > .form-control, .input-group > .form-control-plaintext, .input-group > .custom-select, .input-group > .custom-file{
+    border-radius: 20px;
+    border: 1px solid $border-color;
+    height: 40px;
+    font-size: 14px;
+    &:focus{
+        box-shadow: inset 0 0 5px rgba(0,0,0,.2) !important;
+    }
+}
+textarea{
+            height: 100px !important;
+        }
+        .modal-backdrop{
+            background-color: #989dbe;
+            opacity: .5;
+        }
+        .modal-dialog{
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+        }
+
+.navbar{
+    display: block;
+    overflow: hidden;
+}
+.form-group{
+    label{
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+}
+
+.form-control:focus, .custom-select:focus, .input-group > .form-control:focus, .input-group > .form-control-plaintext:focus, .input-group > .custom-select:focus, .input-group > .custom-file:focus, input[type=checkbox]:focus{
+    border-color: rgba(49, 0, 255, .3) !important;
+    box-shadow: inset 0 0 5px rgba(49, 0, 255, .3) !important;
+}
+
+select{
+    appearance: none;
+}
+
+.row {
+    --bs-gutter-x: 0.5rem !important;
+}
+
+hr {
+    color: transparent !important;
+}

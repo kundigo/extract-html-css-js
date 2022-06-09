@@ -1,0 +1,46 @@
+// @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap');
+
+// $primary-font: 'Raleway', sans-serif;
+$primary-font: 'Montserrat', sans-serif;
+
+$blue: #3100ff;
+$red: #ff425d;
+$green: #00b381;
+$green-dark: #007c59;
+$grey: #999;
+
+$createFlash: rgba(168,221,193,1);
+$deleteFlash: #f7564a;
+$bookFlash: #ffd34c;
+$flashing-duration: infinite;
+$redFont: #e4293b;
+$greenFont: #32b062;
+
+$text-green: #007c59;
+$text-dark-blue: #120437;
+
+$text-off: #989dbe;
+$border-color: #cccfdf;
+$body-text-color: #333;
+
+$green-data: #007C59;
+$green-data-light: #E3FAF3;
+$purple-trade-light: #F6F3FF;
+$green-tiles-header: #F2F8F7;
+$gray-tiles: #F9F9F9;
+$gray-tiles-dark: #F3F3F3;
+
+// Layout
+$table-alternative-bg: #eceef7;
+$card-padding: 35px;
+$title-deco-width: 35px;
+
+
+// Button
+$btn-height: 40px;
+$btn-radious: 20px;
+
+// Grid
+$grid-columns: 24;
+$grid-gutter-width: 1.0rem;

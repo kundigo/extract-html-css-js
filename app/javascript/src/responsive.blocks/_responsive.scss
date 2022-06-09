@@ -1,0 +1,291 @@
+@media(max-width: 768px){
+    @import 'tdc-nav/tdc-nav';
+
+    .app-title {
+        h1 {
+            text-align: center;
+        }
+        h1:before {
+            bottom: 55%;
+        }
+        .row {
+            justify-content: center;
+        }
+    }
+
+    .modal.is-open.modal-header.modal-title h5 {
+        font-size: 1.15rem !important;
+    }
+
+    .trading-interests.crystal_sugar150_br {
+        .trading-interests__header {
+            flex-direction: column;
+            justify-content: center;    
+        }
+    }
+    
+    .trading-interests.soybeans {
+        .trading-interests__header {
+            flex-direction: column-reverse;
+            align-content: center;
+        }
+        .trading-interests-group {
+            .row.soybeans {
+                flex-direction: row-reverse;
+                .offers {
+                    .trading-interests-list__header, .trading-interests-list__main-info, .price-recap {
+                        flex-direction: column-reverse;
+                    }
+                    .price-recap {
+                        flex-direction: row-reverse;
+                        justify-content: flex-end;
+                    }
+                }
+                .bids {
+                    .trading-interests-list__header, .trading-interests-list__main-info, .price-recap {
+                        flex-direction: column;
+                    }
+                    .price-recap {
+                        flex-direction: row;
+                        justify-content: flex-start;
+                    }
+                }
+            }
+        }
+        .trading-interests-list__header {
+            display: none !important;
+        }
+    }
+
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .trading-interests__header {
+        margin-top: 18px;
+    }
+    .trading-interests-group {
+        margin-top: 60px;
+    }
+    .trading-interests-group__heading {
+        position: relative;
+        top: 0;
+    }
+    .trading-interests__header .tdc-btn {
+        margin: 0 7px 5px;
+        min-width: 125px;
+    }
+    .trading-interests-list__header {
+        display: none;
+    }
+    .bids{
+        margin-top: 20px;
+        &:before{
+            content: 'Bids';
+            font-size: 25px;
+            color: $green;
+        }
+    }
+    .offers{
+        margin-top: 20px;
+        &:before{
+            content: 'Offers';
+            font-size: 25px;
+            color: $red;
+        }
+    }
+    .trading-interests-list__items{
+        text-align: left;
+        &.bids, &.offers{
+            margin-top: 5px !important;
+            &:before{
+                display: none;
+            }
+        }
+        .action__edit {
+            right: 35px;;
+        }
+        .action__remove {
+            right: 70px;
+        }
+        i {
+            font-size: 22px;
+        }
+    }
+    .trading-interests-list__column{
+        padding: 2px 5px;
+        &:before{
+            content: attr(data-title);
+            width: 145px;
+            float: left;
+            font-weight: 600;
+            text-align: left;
+        }
+        &.k-price{
+            text-align: left !important;
+        }
+    }
+    .fold-indicator{
+        position: absolute;
+        right: 0;
+        width: 30px;
+        height: 100%;
+    }
+    .trading-interests-list__main-info{
+        position: relative;
+    }
+    .offer{
+        .trading-interests-list__main-info{
+            flex-direction: column-reverse;
+        }
+    }
+    .bid{
+        .trading-interests-list__main-info{
+            flex-direction: column;
+        }
+    }
+    .action__edit{
+        position: absolute;
+        width: 30px;
+        right: 30px;
+        top: 2px;
+        height: 30px;
+        z-index: 999;
+    }
+    .action__remove{
+        position: absolute;
+        width: 30px;
+        right: 60px;
+        top: 2px;
+        height: 30px;
+        z-index: 999;
+    }
+    .w-50 {
+        width: 100% !important;
+    }
+    .w-30 {
+        width: 100%;
+    }
+    .w-20 {
+        width: 100%;
+    }
+    .modal-bid-offer .modal-header, .modal-bid-offer .modal-body, .modal-bid-offer .modal-footer {
+        padding: 20px 10px;
+    }
+    .modal-bid-offer .modal-dialog {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+    .xdsoft_datetimepicker .xdsoft_datepicker {
+    width: 270px;
+    }
+    .application-card{
+        box-shadow: inherit;
+    }
+    .app-title {
+        padding: 20px 15px;
+        font-size: 22px;
+    }
+    .tdc-btn_header,
+    .app-button {
+        height: 30px;
+        line-height: 30px;
+        margin: 10px auto;
+    }
+    .app-content {
+        padding: 35px 15px;
+    }
+    .application-layout {
+        margin: 15px 0;
+    }
+    .tdc-nav__group > li.active > a:after {
+        left: 6%;
+    }
+    [data-title]{
+        position: relative;
+        &:after{
+            position: absolute;
+            left: 43%;
+            top: 6px;
+        }
+    }
+
+    // table
+    table{
+        display: block;
+        thead{
+            display: none;
+        }
+        tbody{
+            display: block;
+            tr {
+                display: block;
+                padding: 15px 0;
+            }
+            td{
+                display: block;
+                padding: 7px 10px;
+                overflow: hidden;
+                &:before{
+                    content: attr(data-title);
+                    font-weight: 500;
+                    color: $text-off;
+                    width: 45%;
+                    display: block;
+                    float: left;
+                    line-height: 18px;
+                }
+                &:after{
+                    content: ":";
+                    float: left;
+                    padding-right: 5px;
+                }
+                &:first-child {
+                    padding-left: 10px;
+                }
+                &.no__title{
+                    display: inline-block;
+                    &:before{
+                        display: none;
+                    }
+                    &:after{
+                        display: none;
+                    }
+                }
+                &.email__font_size{
+                    font-size: 12px;
+                    &:before{
+                        font-size: 14px;
+                    }
+                    &:after{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .xdsoft_calendar{
+        table{
+            display: table;
+            thead{
+                display: table-header-group;
+            }
+            tbody{
+                display: table-row-group;
+                tr{
+                    display: table-row;
+                    td{
+                        display: table-cell;
+                        &:before{
+                            display: none;
+                        }
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

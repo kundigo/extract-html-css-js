@@ -1,0 +1,133 @@
+.tdc-btn{
+    height: $btn-height;
+    line-height: $btn-height;
+    padding: 0 15px;
+    border-radius: $btn-radious;
+    display: inline-block;
+    cursor: pointer;
+    transition: 300ms;
+    text-align: center;
+    min-width: 150px;
+    font-size: 14px;
+    border: none;
+    &:hover{
+        filter: brightness(130%);
+        text-decoration: none;
+        // box-shadow: 0 0 5px rgba(0,0,0,.2);
+    }
+}
+.tdc-btn__color_green{
+  background-color: $green;
+  color: #fff;
+  &:hover{
+      color: #fff;
+  }
+}
+.tdc-btn__color_blue{
+  background-color: $blue;
+  color: #fff;
+  &:hover{
+      color: #fff;
+  }
+}
+.tdc-btn__color_red{
+  background-color: $red;
+  color: #fff;
+  &:hover{
+      color: #fff;
+  }
+}
+.tdc-btn__color_grey{
+  background-color: $grey;
+  color: #fff;
+  &:hover{
+      color: #fff;
+  }
+}
+
+
+
+
+.tdc-btn__color_red{
+    background-color: $red;
+  color: #fff;
+  &:hover{
+      color: #fff;
+  }
+}
+.tdc-btn__opacity{
+    opacity: .3;
+}
+.tdc-btn_header{
+    text-decoration: none;
+    height: 33px;
+    line-height: 35px;
+    margin-left: 15px;
+    display: inline-block;
+    min-width: 130px;
+}
+
+
+// Kill button
+.kill-all {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.my-positions, .send-notifications {
+  position: absolute;
+  right: 160px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tdc-btn_o{
+    background-color: inherit;
+    background: none;
+    border: 1px solid;
+}
+.tdc-btn_o_red{
+    color: $red;
+    border-color: $red;
+    &:hover{
+        background-color: $red;
+        color: #fff;
+        filter: none;
+    }
+}
+.tdc-btn_o_blue{
+    color: $blue;
+    border-color: $blue;
+    &:hover{
+        background-color: $blue;
+        color: #fff;
+    }
+}
+.tdc-btn_o_green{
+    color: $green-dark;
+    border-color: $green-dark;
+    &:hover{
+        background-color: $green-dark;
+        color: #fff;
+    }
+}
+.tdc-btn__extra-info-action{
+    height: 30px;
+    line-height: 30px;
+    min-width: 100px;
+    border: 1px solid $blue;
+    margin-left: 10px;
+    &:focus{
+        outline: none;
+        box-shadow: inherit;
+    }
+}
+.tdc-btn__extra-info-action_o_blue{
+    background-color: inherit;
+    color: $blue;
+}
+
+.tdc-btn_export-data {
+    height: 30px;
+    line-height: 30px;
+}

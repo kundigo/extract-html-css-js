@@ -1,0 +1,125 @@
+.input-block {
+    @extend .input-group;
+
+    &__text {
+        @extend .input-group-text;
+    }
+
+    &__append, &__prepend {
+        @extend .input-group-text;
+    }
+
+    &__error-feedback {
+        @extend .invalid-feedback;
+    }
+
+    &__warning-feedback {
+        margin-top: 0.25rem;
+        font-size: 0.875em;
+        color: orange;
+    }
+
+    &__field {
+    @extend .form-control;
+
+        &--invalid {
+            @extend .is-invalid;
+        }
+    }
+}
+
+.checkbox {
+    position: absolute;
+    margin-bottom: -2px;
+    top: 6px;
+    left: 0;
+
+    &__container {
+    position: relative;
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding-left: 25px;
+    line-height: 2;
+
+        > .input-block__error-feedback {
+            margin-left: -25px;
+        }
+    }
+}
+
+.custom-select {
+    @extend .form-select;
+}
+
+.form-validation {
+    flex-grow: 1;
+
+    input[type=submit] {
+        border: none;
+        background: none;
+        color: white;
+    }
+}
+
+.k-autocomplete { // should be "select";
+    @extend .custom-select;
+}
+
+// Overide validation border radius right change -- Where does this come from ?
+.input-group:not(.has-validation) {
+    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-block:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-block:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3) {
+        border-radius: 20px;
+    }
+}
+
+.html-snippet-form-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__input {
+        width: 100% !important;
+        margin: 0 10px;
+    }
+}
+
+
+.tooltip_code_company {
+    position: relative;
+    overflow: visible;
+
+    &__text {
+        visibility: hidden;
+        width: 120px;
+        background-color: $gray-tiles-dark;
+        color: $grey;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s;
+        top: -5px;
+        left: 120%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30%;
+            left: -5px;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent $gray-tiles-dark transparent transparent;
+        }
+    }
+}
+
+.tooltip_code_company:hover .tooltip_code_company__text {
+    visibility: visible;
+    opacity: 1;
+}

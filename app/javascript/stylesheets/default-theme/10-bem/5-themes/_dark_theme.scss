@@ -1,0 +1,136 @@
+.theme__wrapper--dark {
+    table, .table-sortable {
+        .fi-br-menu-dots {
+            color: white;
+        }
+        th a {
+            color: white;
+        }
+    }
+
+    .table_row {
+        &-header {
+            background: $--devbots-blue-dark !important;
+            color: $--white;
+        }
+
+        .contextual-circle {
+            fill: white;
+        }
+    }
+    .table th {
+        background: $--devbots-blue-dark !important;
+        color: $--white;
+
+        .contextual-circle {
+            fill: white;
+        }
+    }
+
+    .nav-item {
+        .nav-link {  
+            a {
+                text-decoration: none;
+                color: $--devbots-blue-dark !important;
+            }
+            &__close {
+                &-cross {
+                    color: $--devbots-blue-dark !important;
+                }
+            }
+            &.active {
+                border: none;
+                background: $--devbots-blue-dark;
+                a, input {
+                    color: $--white !important;
+                } 
+            }
+        }
+    }
+
+    .center-block {
+        &__content {  
+            background: $--devbots-blue-dark;
+            h2 {
+                color: $--white;
+            }
+        }
+    
+        .field {
+            label {
+                color: $--white;
+            }
+        }
+    
+        .actions {
+            display: flex;
+            justify-content: center;
+    
+            > input {
+                background: $--white;
+                color: $--devbots-blue-dark !important;
+            }
+        }
+    
+        a {
+            color: $--white;
+        }
+    }  
+    
+    .sidebar {
+        background-color: $--devbots-blue-dark;
+
+        > * {
+        color: $--white;
+        }
+
+        &__header {
+        color: $--white;
+
+            &-icon--placeholder {
+                border: 1px solid $--white;
+            }
+
+            &:hover {
+                color: $--devbots-blue-light;
+
+                > * {
+                border-color: $--devbots-blue-light;
+                }
+            }
+        }
+
+        &__collapse {
+            border-right: 1px solid $--white;
+            border-bottom: 1px solid $--white;
+        }
+      
+        &__item {
+            &--active {
+                > a {
+                color: $--devbots-blue-light !important;
+                }
+            }
+        }
+      
+        &__link {
+            color: $--light;
+        
+            &:hover {
+                color: $--devbots-blue-light;
+            }
+        }
+
+        &__actionList {
+            background-color: $--white;
+            > li {
+                > * {
+                    color: $--devbots-blue;
+                }
+                &:hover {
+                    background-color: $--devbots-gray;
+                }
+            }
+        }
+    }
+}

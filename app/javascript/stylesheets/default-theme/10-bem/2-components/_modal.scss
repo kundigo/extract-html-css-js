@@ -1,0 +1,114 @@
+.modal {
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+
+    &--center {
+      @extend .modal__overlay;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__container {
+    padding: 50px;
+    width: 650px;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    @include modal-form-display-mixin;
+  }
+  &__overlay--center .modal__container {
+      &--small {
+        @extend .modal__container;
+        width: 300px;
+      }
+      &--large {
+        @extend .modal__container;
+        width: 800px;
+      }
+      &--extralarge {
+        @extend .modal__container;
+        width: 1140px;
+      }
+  }
+  
+
+  .preloader--hidden {
+    display: none;
+  }
+  .preloader--shown {
+    position: fixed;
+    top: 40px;
+    right: 25px;
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 3;
+  }
+  
+  .preloader__wheel {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    margin-left: 25px;
+    will-change: transform;
+    animation: preloader__wheel-spin 1s infinite linear;
+    z-index: 3;
+  }
+  
+  @keyframes preloader__wheel-spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }  
+}
+
+.k-form-js-lib-dev {
+  display: block;
+  width: 400px;
+  margin: 25px auto;
+}
+
+input[type=submit]:disabled {
+  pointer-events: none;
+}
+
+.form-validation {
+  display: flex;
+  align-items: flex-start;
+
+  &__global-error {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin: 8px 16px;
+  }
+
+  &__tooltip {
+    flex-grow: 1;
+    padding: 8px 12px;
+    text-align: left;
+    list-style-type: none;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,226 @@
+table{
+    width: 100%;
+}
+th{
+    color: $text-off;
+    padding: 10px 8px;
+}
+td{
+    padding: 15px 8px;
+    font-size: 14px;
+    line-height: 14px;
+    a, button {
+        i{
+            color: $text-off;
+        }
+        &:hover{
+            i{
+                filter: brightness(70%);
+            }
+        }
+    }
+    button {
+        height:unset !important;
+        padding: 0 !important;
+    }
+}
+tr{
+    td:first-child{
+        padding-left: 15px;
+    }
+    td:last-child{
+        padding-right: 15px;
+    }
+}
+tbody{
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    tr:nth-child(even){
+        background-color: $table-alternative-bg;
+    }
+}
+
+.tile-table {
+    table-layout: fixed;
+    white-space: nowrap;
+    margin: 0;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 5px 9px;
+    text-align: center;
+    background-color: white;
+
+    &__container {
+        float: left;
+        width: 100%;
+        max-height: 75vh;
+        overflow: scroll;
+        margin: 20px 0;
+    }
+
+    td,
+    th {
+        width: 160px;
+        border-radius: 7px;
+        padding: 10px 8px;
+        &.table-spacer {
+            background-color: white !important;
+            width: 20px;
+        }
+    }
+    thead th {
+        position: sticky;
+        z-index: 1;
+        border-radius: 0;
+    }
+    thead tr:first-child th {
+        top: 0;
+        background-color: $green-tiles-header;
+        border-bottom: 2px solid white;
+        &:first-child {
+            background-color: white !important;
+        }
+    }
+    thead tr:nth-child(2) th {
+        top: 42px;
+        border-bottom: 2px solid white;
+        &:first-child {
+            background-color: white !important;
+        }
+        &:nth-child(3n - 1) { // Bid
+            background-color: $gray-tiles-dark;
+            font-weight: bold;
+        }
+        &:nth-child(3n) { // Offer
+            background-color: $gray-tiles;
+        }
+    }
+  
+    tbody {
+        box-shadow: none;
+        border-radius: 0;
+
+        th { // dates
+            background-color: $gray-tiles !important;
+            border-right: 2px solid white;
+        }
+    }
+    thead th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        border-radius: 0;
+    }
+    tbody th {
+        position: sticky;
+        left: 0;
+        background: white;
+        z-index: 1;
+        border-radius: 0;
+    }
+    tr {
+        background-color: white !important;
+        td:nth-child(3n - 1) { // Bid
+            background-color: $gray-tiles-dark;
+            font-weight: bold;
+        }
+        td:nth-child(3n) { // Offer
+            background-color: $gray-tiles;
+        }
+    }
+}
+
+// Oscar component : sortable table
+.show_field__component--has_many_div_table {
+    overflow-x: scroll;
+    .show_field--label-column {
+        display: block !important;
+    }
+}
+.table-sortable {
+    display: table;
+    min-width: 100%;
+    margin: 4px 4px 25px;
+    background-color: white;
+
+    .table_content-sortable {
+        display: table-row-group;
+    }
+
+    .table_row {
+        &-header {
+            display: table-row;
+            >.table_col {
+                color: $text-off;
+                border-bottom: 2px solid black;
+            }
+
+            .table_col--shipment_period_start,
+            .table_col--shipment_period_end {
+                min-width: 120px;
+            }
+        }
+        &-sortable {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: table-row;
+            width: 100%;
+            &:nth-child(even){
+                background-color: $table-alternative-bg;
+            }
+            .table_col {
+                border-bottom: 1px solid $border-color;
+            }
+        }
+    }
+    .table_label {
+        display: table-cell;
+        font-weight: bold;
+        height: 50px;
+        vertical-align: middle;
+    }
+    .table_col {
+        display: table-cell;
+        box-sizing: border-box;
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle;
+
+        &-action {
+            min-width: 335px;
+            padding: 0;
+        }
+
+        .table_action {
+            display: inline-block;
+            width: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .table_col--position {
+        padding: 0px 8px;
+        .component-reorder-handle {
+            width: auto;
+            height: auto;
+            padding: 0px;
+        }
+        .table_handle {
+            width: 100%;
+            cursor: move;
+            cursor: grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
+
+            &:active {
+                cursor: grabbing;
+                cursor: -moz-grabbing;
+                cursor: -webkit-grabbing;
+            }
+        }
+    }
+    .action-delete--with-icon {
+        color: #2700cc;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+    }
+}

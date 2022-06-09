@@ -1,0 +1,55 @@
+.main__content--embedded {
+    @include modal-form-display-mixin;
+    display: flex;
+    flex-direction: column;
+    margin-left: -250px;
+    padding: 50px 25px;
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    .table-sortable {
+        margin-right: 0;
+    }
+    .action-bar {
+        margin-right: 0;
+    }
+
+    .action-bar--embedded {
+        display: flex;
+        flex-wrap: wrap;
+        //gap: 24px; // Not supported by Safari
+        width: 100%;
+        margin-bottom: 24px;
+
+        .action-bar__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 24px;
+            margin-bottom: 8px;
+
+            a {
+                text-decoration: none;
+            }
+
+            &--separator {
+                @extend .action-bar__item;
+                flex: 0 1;
+            }
+        }
+    }
+
+    input {
+        &[type=submit] {
+            &[value="Destroy"] {
+                background: none;
+                border: none;
+            }
+        }
+    }
+
+    .model-form__close {
+        display: none;
+    }
+}
